@@ -1,0 +1,259 @@
+# Sift/Shift - Requirements Document
+
+## 1. Functional Requirements
+
+### 1.1 User Authentication & Account Management
+- FR1.1: System shall allow users to create an account with email and password
+- FR1.2: System shall allow users to log in and log out
+- FR1.3: System shall securely store user credentials in MySQL database
+- FR1.4: System shall maintain user session across browser refreshes
+- FR1.5: System shall store user progress and game state in cloud saves
+
+### 1.2 Resource Management
+- FR2.1: System shall generate resource nodes on the game map
+- FR2.2: System shall support both predictable and random resource tile placement
+- FR2.3: System shall provide infinite resource nodes for continuous extraction
+- FR2.4: System shall allow optional finite resource nodes for gameplay variety
+- FR2.5: System shall allow players to place miners on resource tiles
+
+### 1.3 Factory Building & Management
+- FR3.1: System shall provide a tile-based grid system for factory construction
+- FR3.2: System shall allow players to place, rotate, and delete factory tiles
+- FR3.3: System shall implement conveyor belt mechanics for item transport
+- FR3.4: System shall implement processing tiles that transform materials
+- FR3.5: System shall validate production chain connections and item routing
+- FR3.6: System shall calculate and display factory efficiency metrics
+
+### 1.4 Navigation & Controls
+- FR4.1: System shall allow click-and-drag navigation of the game world
+- FR4.2: System shall support zoom in/out functionality
+- FR4.3: System shall provide a minimap for world overview
+- FR4.4: System shall highlight selected tiles and valid placement areas
+
+### 1.5 Economy & Progression
+- FR5.1: System shall award in-game currency when products are sold
+- FR5.2: System shall calculate item value based on processing/refinement level
+- FR5.3: System shall allow players to spend currency to unlock new tiles
+- FR5.4: System shall allow players to spend currency to unlock new resources
+- FR5.5: System shall track player progression through achievement milestones
+- FR5.6: System shall provide daily login bonuses
+- FR5.7: System shall implement a battle pass progression system
+
+### 1.6 Time Management
+- FR6.1: System shall process production in real-time
+- FR6.2: System shall display countdown timers for active processes
+- FR6.3: System shall continue processing when player is offline
+- FR6.4: System shall calculate and award offline progress upon login
+
+### 1.7 Monetization
+- FR7.1: System shall allow players to purchase in-game currency with real money
+- FR7.2: System shall allow players to purchase time skips (30 in-game minutes)
+- FR7.3: System shall track purchase history in user account
+- FR7.4: System shall ensure all content is accessible without purchases
+- FR7.5: System shall securely process payment transactions
+
+### 1.8 Tutorial & Onboarding
+- FR8.1: System shall provide an interactive tutorial for new players
+- FR8.2: Tutorial shall be completable within 20-30 minutes
+- FR8.3: System shall display contextual tooltips for first-time actions
+- FR8.4: System shall provide a help menu with tile explanations
+- FR8.5: System shall track tutorial completion status
+
+### 1.9 Save & Load System
+- FR9.1: System shall auto-save player progress every 5 minutes
+- FR9.2: System shall save game state upon logout
+- FR9.3: System shall load player progress upon login
+- FR9.4: System shall handle save conflicts for concurrent sessions
+- FR9.5: System shall provide manual save option
+
+## 2. Non-Functional Requirements
+
+### 2.1 Performance
+- NFR1.1: Game shall maintain 30+ FPS on minimum hardware specifications
+- NFR1.2: Game shall load initial screen within 5 seconds
+- NFR1.3: Save operations shall complete within 2 seconds
+- NFR1.4: Database queries shall respond within 500ms
+- NFR1.5: Game shall support factories with up to 1000 active tiles
+
+### 2.2 Usability
+- NFR2.1: UI shall be intuitive for players unfamiliar with factory games
+- NFR2.2: Tutorial completion rate shall exceed 80%
+- NFR2.3: All text shall be readable at minimum supported resolution
+- NFR2.4: Controls shall be responsive with input lag under 50ms
+- NFR2.5: Error messages shall be clear and actionable
+
+### 2.3 Reliability
+- NFR3.1: System shall have 99% uptime during active development
+- NFR3.2: System shall automatically recover from crashes without data loss
+- NFR3.3: Save system shall prevent data corruption
+- NFR3.4: Payment processing shall have 100% transaction accuracy
+- NFR3.5: System shall handle network interruptions gracefully
+
+### 2.4 Security
+- NFR4.1: Passwords shall be hashed and salted before storage
+- NFR4.2: Payment information shall never be stored locally
+- NFR4.3: User sessions shall expire after 24 hours of inactivity
+- NFR4.4: System shall prevent SQL injection attacks
+- NFR4.5: System shall use HTTPS for all client-server communication
+
+### 2.5 Scalability
+- NFR5.1: Database shall support up to 10,000 concurrent users
+- NFR5.2: System architecture shall allow horizontal scaling
+- NFR5.3: Asset loading shall be optimized for low bandwidth
+- NFR5.4: System shall handle peak loads during launch events
+
+### 2.6 Maintainability
+- NFR6.1: Code shall follow Java coding standards
+- NFR6.2: All functions shall be documented with inline comments
+- NFR6.3: System shall use modular architecture for easy updates
+- NFR6.4: Version control shall track all code changes
+- NFR6.5: Automated tests shall cover critical game systems
+
+### 2.7 Portability
+- NFR7.1: Game shall run on Windows 10+ and MacOS 12+
+- NFR7.2: Game shall support Chrome, Firefox, Safari, and Edge browsers
+- NFR7.3: Game shall adapt to screen resolutions from 1280x720 to 4K
+- NFR7.4: Game assets shall be platform-independent
+
+### 2.8 Compatibility
+- NFR8.1: System shall be compatible with GameMaker Studio 2023+
+- NFR8.2: Database shall be compatible with MySQL 8.0+
+- NFR8.3: Game shall support Java 11+
+- NFR8.4: System shall integrate with standard payment gateways
+
+## 3. System Requirements
+
+### 3.1 Minimum Hardware Requirements (Client)
+- Processor: Dual-core CPU (2.0 GHz or higher)
+- Memory: 8GB RAM
+- Graphics: Integrated graphics with OpenGL 2.1 support
+- Storage: 500MB available space
+- Network: Broadband internet connection
+
+### 3.2 Recommended Hardware Requirements (Client)
+- Processor: Quad-core CPU (3.0 GHz or higher)
+- Memory: 16GB RAM
+- Graphics: Dedicated GPU with 2GB VRAM
+- Storage: 1GB available space
+- Network: High-speed broadband connection
+
+### 3.3 Software Requirements (Client)
+- Operating System: Windows 10/11 or MacOS 12+
+- Browser: Chrome 90+, Firefox 88+, Safari 14+, or Edge 90+
+- Other: JavaScript enabled, cookies enabled
+
+### 3.4 Development Environment Requirements
+- IDE: Visual Studio Code
+- Game Engine: GameMaker Studio 2023+
+- Programming Language: Java 11+ JDK
+- Database: MySQL 8.0+
+- Version Control: Git 2.30+
+- Repository: GitHub
+
+## 4. User Roles & Permissions
+
+### 4.1 Player (Standard User)
+- Create and manage personal account
+- Play game and build factories
+- Make purchases (optional)
+- View personal statistics and achievements
+- Provide feedback through support channels
+
+### 4.2 Developer (Team Member)
+- Full access to codebase and repository
+- Create, test, and deploy game features
+- Access to database for debugging
+- Manage game balance and economy
+- Review player feedback and bug reports
+
+### 4.3 System Administrator
+- Manage server infrastructure
+- Monitor system performance and uptime
+- Manage database backups
+- Handle security and access control
+- Deploy updates and patches
+
+## 5. Constraints
+
+### 5.1 Technical Constraints
+- Must use Java as primary development language
+- Must use GameMaker Studio as game engine
+- Must use MySQL for database
+- Must complete within 10-12 week development cycle
+- Limited to 2D graphics capabilities
+
+### 5.2 Business Constraints
+- Must be free-to-play at launch
+- Microtransactions must be optional (ethical monetization)
+- Must be more accessible than Factorio
+- Must compete with existing free alternatives
+
+### 5.3 Legal Constraints
+- Must comply with data protection regulations
+- Must clearly disclose microtransaction mechanics
+- Must securely handle payment information
+- Must respect intellectual property of inspiration games
+
+### 5.4 Resource Constraints
+- Team of 6 student developers
+- Limited testing resources
+- No budget for third-party services
+- Academic deadline: May 2026
+
+## 6. Assumptions & Dependencies
+
+### 6.1 Assumptions
+- Users have stable internet connections
+- Users are familiar with basic gaming controls
+- GameMaker Studio will remain stable during development
+- MySQL free tier will support development needs
+- Browser compatibility will remain consistent
+
+### 6.2 Dependencies
+- GameMaker Studio availability and functionality
+- GitHub repository access for all team members
+- MySQL database hosting service
+- Payment gateway API (for microtransactions)
+- Web browser rendering engines
+
+## 7. Acceptance Criteria
+
+### 7.1 Minimum Viable Product (MVP)
+- [ ] User can create account and log in
+- [ ] User can place miners on resource nodes
+- [ ] User can sell resources for in-game currency
+- [ ] User can place and connect conveyor belts
+- [ ] User can place processing tiles
+- [ ] Game saves progress automatically
+- [ ] Tutorial guides new players through basics
+- [ ] Game runs at 30+ FPS on minimum hardware
+
+### 7.2 Full Release Criteria
+- [ ] All MVP features complete and tested
+- [ ] Microtransaction system functional
+- [ ] Battle pass and login bonuses implemented
+- [ ] Multiple resource types and processing chains
+- [ ] Polish and visual feedback for all actions
+- [ ] Bug count below 10 critical issues
+- [ ] Tutorial completion rate above 80%
+- [ ] Positive feedback from beta testers
+
+## 8. Success Metrics
+
+### 8.1 Development Metrics
+- Complete all phases on schedule (see Gantt chart)
+- Maintain less than 5% critical bug rate
+- Achieve 90%+ code review completion
+- Deploy working demo by April 21, 2026
+
+### 8.2 User Metrics
+- Tutorial completion rate > 80%
+- Average session length > 20 minutes
+- User retention rate > 40% (week 1)
+- User satisfaction rating > 4/5
+
+### 8.3 Technical Metrics
+- System uptime > 99%
+- Average load time < 5 seconds
+- Database query response < 500ms
+- Payment success rate > 99.5%
