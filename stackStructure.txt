@@ -1,0 +1,496 @@
+# Sift/Shift - Technology Stack Structure
+
+## Overview
+This document outlines the complete technology stack for the Sift/Shift factory automation game project.
+
+---
+
+## 1. Frontend (Client-Side)
+
+### Game Engine
+- **GameMaker Studio 2023+**
+  - 2D rendering engine
+  - Sprite and animation management
+  - Particle systems
+  - Collision detection
+  - Room/level management
+
+### Game Logic Language
+- **GML (GameMaker Language)**
+  - Event-driven game mechanics
+  - Object-oriented game entities
+  - UI rendering and controls
+  - Client-side game state management
+
+### UI Framework
+- **GameMaker's Built-in UI System**
+  - Menu screens
+  - HUD elements
+  - Tooltips and notifications
+  - Tutorial overlays
+
+### Client-Side Storage
+- **Browser LocalStorage / GameMaker Data Structures**
+  - Temporary session data
+  - User preferences
+  - Cache for frequently accessed data
+
+---
+
+## 2. Backend (Server-Side)
+
+### Primary Language
+- **Java 11+**
+  - Core business logic
+  - Server-side game calculations
+  - API request handling
+  - Data validation
+
+### Web Framework
+- **Spring Boot** (Recommended)
+  - RESTful API endpoints
+  - Dependency injection
+  - Security configuration
+  - Session management
+  
+  **OR**
+  
+- **Lightweight Alternative: Javalin or Spark**
+  - Simpler setup for smaller scope
+  - RESTful routing
+  - Middleware support
+
+### API Layer
+- **REST API**
+  - `/api/auth/register` - User registration
+  - `/api/auth/login` - User authentication
+  - `/api/auth/logout` - Session termination
+  - `/api/game/save` - Save game state
+  - `/api/game/load` - Load game state
+  - `/api/economy/purchase` - Handle microtransactions
+  - `/api/economy/balance` - Get user balance
+  - `/api/progression/achievements` - Track achievements
+  - `/api/progression/battlepass` - Battle pass data
+
+### Authentication & Security
+- **Spring Security** (if using Spring Boot)
+  - JWT (JSON Web Tokens) for stateless authentication
+  - Password hashing: BCrypt
+  - CORS configuration
+  - HTTPS enforcement
+
+### Server Runtime
+- **JVM (Java Virtual Machine)**
+  - Cross-platform compatibility
+  - Memory management
+  - Garbage collection
+
+---
+
+## 3. Database Layer
+
+### Primary Database
+- **MySQL 8.0+**
+  - Relational database for structured data
+  - ACID compliance for transactions
+  - User accounts and authentication
+  - Game saves and progression
+  - Purchase history
+  - Achievement tracking
+
+### Database Schema (Key Tables)
+```sql
+-- Users table
+users (
+  user_id INT PRIMARY KEY AUTO_INCREMENT,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP,
+  last_login TIMESTAMP
+)
+
+-- Game saves table
+game_saves (
+  save_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT FOREIGN KEY REFERENCES users(user_id),
+  save_data JSON,
+  last_modified TIMESTAMP
+)
+
+-- User economy table
+user_economy (
+  user_id INT PRIMARY KEY FOREIGN KEY REFERENCES users(user_id),
+  in_game_currency DECIMAL(10,2),
+  premium_currency DECIMAL(10,2)
+)
+
+-- Purchases table
+purchases (
+  purchase_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT FOREIGN KEY REFERENCES users(user_id),
+  item_type VARCHAR(50),
+  amount DECIMAL(10,2),
+  purchase_date TIMESTAMP
+)
+
+-- Achievements table
+user_achievements (
+  achievement_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT FOREIGN KEY REFERENCES users(user_id),
+  achievement_name VARCHAR(100),
+  unlocked_at TIMESTAMP
+)
+
+-- Battle pass progress table
+battlepass_progress (
+  user_id INT PRIMARY KEY FOREIGN KEY REFERENCES users(user_id),
+  current_level INT DEFAULT 1,
+  experience_points INT DEFAULT 0,
+  season_id INT
+)
+```
+
+### Database Connection
+- **JDBC (Java Database Connectivity)**
+  - MySQL Connector/J driver
+  - Connection pooling (HikariCP recommended)
+  - Prepared statements for SQL injection prevention
+
+### ORM (Optional)
+- **Hibernate / JPA**
+  - Object-relational mapping
+  - Entity management
+  - Simplified database operations
+  - Query abstraction
+
+---
+
+## 4. Development Tools
+
+### Version Control
+- **Git**
+  - Source code management
+  - Branch strategy: feature branches → dev → main
+  - Commit conventions
+  
+- **GitHub**
+  - Remote repository hosting
+  - Code reviews via pull requests
+  - Issue tracking
+  - Project board (Kanban)
+
+### IDE & Code Editors
+- **Visual Studio Code**
+  - Java development
+  - Git integration
+  - Extensions: Java Extension Pack, Spring Boot Extension
+
+- **GameMaker Studio IDE**
+  - Game development
+  - Sprite editing
+  - Room design
+  - Built-in debugger
+
+### Build Tools
+- **Maven** or **Gradle**
+  - Dependency management
+  - Build automation
+  - Testing framework integration
+  - Package deployment
+
+### Testing Frameworks
+- **JUnit 5**
+  - Unit testing for Java backend
+  - Integration testing
+  - Test automation
+
+- **GameMaker's Built-in Testing**
+  - Manual playtesting
+  - Debug mode
+  - Performance profiling
+
+### API Testing
+- **Postman**
+  - API endpoint testing
+  - Request/response validation
+  - Environment configuration
+
+---
+
+## 5. Deployment & Hosting
+
+### Application Server
+- **Apache Tomcat** or **Embedded Server (Spring Boot)**
+  - Servlet container
+  - HTTP request handling
+  - Production deployment
+
+### Web Server (Optional)
+- **Nginx**
+  - Reverse proxy
+  - Load balancing
+  - Static file serving
+  - SSL/TLS termination
+
+### Hosting Options
+- **Backend Hosting:**
+  - AWS EC2 (Free Tier eligible)
+  - Heroku (Free tier)
+  - DigitalOcean
+  - Oracle Cloud (Always Free)
+
+- **Database Hosting:**
+  - AWS RDS MySQL (Free Tier)
+  - FreeSQLDatabase.com
+  - Clever Cloud (Free tier)
+  - Railway.app
+
+- **Game Client Distribution:**
+  - GitHub Pages (for web builds)
+  - itch.io (game distribution platform)
+  - Self-hosted on AWS S3 + CloudFront
+
+### CI/CD (Continuous Integration/Deployment)
+- **GitHub Actions**
+  - Automated testing on push
+  - Build verification
+  - Deployment automation
+  - Code quality checks
+
+---
+
+## 6. Communication & Collaboration
+
+### Team Communication
+- **Slack** or **Discord**
+  - Real-time messaging
+  - Channel organization by topic
+  - File sharing
+  - Bot integrations
+
+### Project Management
+- **Jira** or **GitHub Projects**
+  - Sprint planning
+  - Task tracking
+  - Burndown charts
+  - Backlog management
+
+### Documentation
+- **Markdown Files (in GitHub repo)**
+  - README.md
+  - REQUIREMENTS.md
+  - STACK.md
+  - API_DOCUMENTATION.md
+  - CONTRIBUTING.md
+
+- **Google Docs** (for collaborative editing)
+  - Design documents
+  - Meeting notes
+  - Project proposals
+
+---
+
+## 7. External APIs & Services
+
+### Payment Processing
+- **Stripe API** or **PayPal API**
+  - Secure payment handling
+  - Transaction processing
+  - Webhook notifications
+  - Currency conversion
+
+### Analytics (Optional)
+- **Google Analytics**
+  - User behavior tracking
+  - Session metrics
+  - Conversion tracking
+
+---
+
+## 8. Security Stack
+
+### HTTPS/SSL
+- **Let's Encrypt**
+  - Free SSL certificates
+  - Automatic renewal
+  - HTTPS enforcement
+
+### Authentication
+- **JWT (JSON Web Tokens)**
+  - Stateless authentication
+  - Token expiration
+  - Refresh tokens
+
+### Password Security
+- **BCrypt**
+  - Password hashing
+  - Salt generation
+  - Adaptive hashing
+
+### Input Validation
+- **Java Bean Validation (JSR 380)**
+  - Request validation
+  - Data sanitization
+  - Type checking
+
+---
+
+## 9. Monitoring & Logging
+
+### Application Logging
+- **SLF4J + Logback**
+  - Structured logging
+  - Log levels (DEBUG, INFO, WARN, ERROR)
+  - File rotation
+  - Console output
+
+### Error Tracking (Optional)
+- **Sentry** (Free tier)
+  - Real-time error monitoring
+  - Stack trace capture
+  - User impact tracking
+
+---
+
+## 10. Development Workflow
+
+### Branching Strategy
+```
+main (production-ready)
+  ├── dev (integration branch)
+  │   ├── feature/user-authentication
+  │   ├── feature/resource-management
+  │   ├── feature/factory-building
+  │   └── feature/economy-system
+  └── hotfix/critical-bug-fix
+```
+
+### Development Process
+1. Create feature branch from `dev`
+2. Implement feature/fix
+3. Write unit tests
+4. Commit with descriptive message
+5. Push to GitHub
+6. Create pull request
+7. Code review by team member
+8. Merge to `dev` after approval
+9. Test on `dev` branch
+10. Merge to `main` for release
+
+---
+
+## 11. Stack Diagram
+```
+┌─────────────────────────────────────────────────────────┐
+│                    CLIENT LAYER                          │
+│  ┌────────────────────────────────────────────────┐     │
+│  │  GameMaker Studio (GML)                        │     │
+│  │  - Game rendering & UI                         │     │
+│  │  - Input handling                              │     │
+│  │  - Client-side game logic                      │     │
+│  └────────────┬───────────────────────────────────┘     │
+└───────────────┼──────────────────────────────────────────┘
+                │ HTTPS/REST API
+┌───────────────┼──────────────────────────────────────────┐
+│               ▼          API LAYER                       │
+│  ┌────────────────────────────────────────────────┐     │
+│  │  Java Spring Boot / Javalin                    │     │
+│  │  - REST API endpoints                          │     │
+│  │  - Authentication (JWT)                        │     │
+│  │  - Business logic                              │     │
+│  └────────────┬───────────────────────────────────┘     │
+└───────────────┼──────────────────────────────────────────┘
+                │ JDBC / Hibernate
+┌───────────────┼──────────────────────────────────────────┐
+│               ▼       DATABASE LAYER                     │
+│  ┌────────────────────────────────────────────────┐     │
+│  │  MySQL 8.0+                                    │     │
+│  │  - User accounts                               │     │
+│  │  - Game saves                                  │     │
+│  │  - Economy & purchases                         │     │
+│  │  - Progression data                            │     │
+│  └────────────────────────────────────────────────┘     │
+└──────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│                EXTERNAL SERVICES                         │
+│  - Stripe/PayPal (Payments)                             │
+│  - GitHub (Version Control)                             │
+│  - AWS/Heroku (Hosting)                                 │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 12. Technology Justification
+
+### Why GameMaker Studio?
+- ✅ Beginner-friendly for 2D game development
+- ✅ Built-in sprite/animation tools
+- ✅ Quick prototyping capabilities
+- ✅ Team has access to free educational license
+- ❌ Limited 3D capabilities (acceptable for 2D game)
+
+### Why Java Backend?
+- ✅ Team familiarity (all members know Java)
+- ✅ Cross-platform JVM compatibility
+- ✅ Mature ecosystem and libraries
+- ✅ Strong typing for fewer runtime errors
+- ✅ Good integration with MySQL
+
+### Why MySQL?
+- ✅ Free and open-source
+- ✅ Reliable and widely-used
+- ✅ ACID compliance for transactions
+- ✅ Good documentation and community support
+- ✅ Team familiarity with SQL
+
+### Why REST API?
+- ✅ Simple and well-understood architecture
+- ✅ Stateless design (scales well)
+- ✅ Language-agnostic (GameMaker can call HTTP)
+- ✅ Easy to test with tools like Postman
+
+---
+
+## 13. Alternative Considerations
+
+### Considered but Not Selected:
+
+**Game Engines:**
+- Unity: More complex, steeper learning curve
+- Godot: Less team familiarity, uses GDScript/C#
+- Unreal: Overkill for 2D, performance overhead
+
+**Backend Languages:**
+- Python (Flask/Django): Less type-safe, team prefers Java
+- C++: Too low-level for rapid development
+- Node.js: Team less familiar with JavaScript backend
+
+**Databases:**
+- PostgreSQL: More features but MySQL sufficient for scope
+- MongoDB: NoSQL unnecessary for structured data
+- SQLite: Not suitable for multi-user cloud saves
+
+---
+
+## 14. Development Environment Setup Checklist
+
+- [ ] Install Java JDK 11+
+- [ ] Install Visual Studio Code
+- [ ] Install GameMaker Studio
+- [ ] Install MySQL 8.0+ locally
+- [ ] Install Git
+- [ ] Clone GitHub repository
+- [ ] Install Maven/Gradle
+- [ ] Set up MySQL database schema
+- [ ] Configure application.properties (Spring Boot)
+- [ ] Install Postman for API testing
+- [ ] Join team Slack/Discord
+- [ ] Set up GitHub SSH keys
+- [ ] Configure IDE extensions (Java, Spring Boot)
+
+---
+
+**Last Updated:** February 2026  
+**Project Repository:** https://github.com/DillonOpperman/Sift-Shift Sonnet 4.5
