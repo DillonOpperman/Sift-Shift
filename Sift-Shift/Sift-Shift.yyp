@@ -32,6 +32,8 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"InGame","folderPath":"folders/Sprites/InGame.yy","name":"InGame","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Icons","folderPath":"folders/Sprites/InGame/Icons.yy","name":"Icons","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"FacilityIcons","folderPath":"folders/Sprites/InGame/Icons/FacilityIcons.yy","name":"FacilityIcons","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"TierIcons","folderPath":"folders/Sprites/InGame/Icons/TierIcons.yy","name":"TierIcons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tiles","folderPath":"folders/Sprites/InGame/Tiles.yy","name":"Tiles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Sprites/InGame/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Backgrounds","folderPath":"folders/Sprites/InGame/UI/Backgrounds.yy","name":"Backgrounds","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -46,7 +48,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.4.991",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"Sift-Shift",
   "resources":[
@@ -131,6 +133,7 @@
     {"id":{"name":"Lock","path":"sprites/Lock/Lock.yy",},},
     {"id":{"name":"LowRarity","path":"sprites/LowRarity/LowRarity.yy",},},
     {"id":{"name":"LowRarityTile","path":"sprites/LowRarityTile/LowRarityTile.yy",},},
+    {"id":{"name":"MineIcon","path":"sprites/MineIcon/MineIcon.yy",},},
     {"id":{"name":"Quit_Button","path":"sprites/Quit_Button/Quit_Button.yy",},},
     {"id":{"name":"R","path":"sprites/R/R.yy",},},
     {"id":{"name":"Red_Button","path":"sprites/Red_Button/Red_Button.yy",},},
@@ -159,6 +162,7 @@
     {"id":{"name":"Tier02","path":"sprites/Tier02/Tier02.yy",},},
     {"id":{"name":"Tier03","path":"sprites/Tier03/Tier03.yy",},},
     {"id":{"name":"Tier04","path":"sprites/Tier04/Tier04.yy",},},
+    {"id":{"name":"WarehouseIcon","path":"sprites/WarehouseIcon/WarehouseIcon.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

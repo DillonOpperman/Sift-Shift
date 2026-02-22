@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Icons",
-    "path":"folders/Sprites/InGame/Icons.yy",
+    "name":"TierIcons",
+    "path":"folders/Sprites/InGame/Icons/TierIcons.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
