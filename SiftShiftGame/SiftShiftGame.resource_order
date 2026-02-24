@@ -1,0 +1,19 @@
+{
+  "FolderOrderSettings":[
+    {"name":"obj","order":9,"path":"folders/obj.yy",},
+    {"name":"spr","order":10,"path":"folders/spr.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"Font1","order":11,"path":"fonts/Font1/Font1.yy",},
+    {"name":"obj_controller","order":3,"path":"objects/obj_controller/obj_controller.yy",},
+    {"name":"obj_conveyor","order":2,"path":"objects/obj_conveyor/obj_conveyor.yy",},
+    {"name":"obj_iron","order":5,"path":"objects/obj_iron/obj_iron.yy",},
+    {"name":"obj_ironq","order":4,"path":"objects/obj_ironq/obj_ironq.yy",},
+    {"name":"obj_warehouse","order":1,"path":"objects/obj_warehouse/obj_warehouse.yy",},
+    {"name":"Sprite2","order":1,"path":"sprites/Sprite2/Sprite2.yy",},
+    {"name":"Sprite3","order":2,"path":"sprites/Sprite3/Sprite3.yy",},
+    {"name":"Sprite4","order":3,"path":"sprites/Sprite4/Sprite4.yy",},
+    {"name":"Sprite5","order":4,"path":"sprites/Sprite5/Sprite5.yy",},
+    {"name":"TileSet1","order":12,"path":"tilesets/TileSet1/TileSet1.yy",},
+  ],
+}
