@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Tiles",
-    "path":"folders/Sprites/InGame/Tiles.yy",
+    "name":"Borders",
+    "path":"folders/Sprites/InGame/Tiles/Borders.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
