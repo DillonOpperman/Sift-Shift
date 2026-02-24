@@ -1,0 +1,13 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"O_Conveyor","order":5,"path":"objects/O_Conveyor/O_Conveyor.yy",},
+    {"name":"O_Empty","order":1,"path":"objects/O_Empty/O_Empty.yy",},
+    {"name":"O_Miner","order":3,"path":"objects/O_Miner/O_Miner.yy",},
+    {"name":"O_Warehouse","order":7,"path":"objects/O_Warehouse/O_Warehouse.yy",},
+    {"name":"S_Conveyor","order":6,"path":"sprites/S_Conveyor/S_Conveyor.yy",},
+    {"name":"S_Empty","order":2,"path":"sprites/S_Empty/S_Empty.yy",},
+    {"name":"S_Miner","order":4,"path":"sprites/S_Miner/S_Miner.yy",},
+    {"name":"S_Warehouse","order":8,"path":"sprites/S_Warehouse/S_Warehouse.yy",},
+  ],
+}

@@ -1,0 +1,1 @@
+var copperOre=0
