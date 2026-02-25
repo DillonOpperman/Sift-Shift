@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_dps",
-    "path":"sprites/spr_dps/spr_dps.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
