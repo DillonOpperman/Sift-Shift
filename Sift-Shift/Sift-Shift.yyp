@@ -12,6 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"TileSets","folderPath":"folders/TileSets.yy","name":"TileSets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"InGame","folderPath":"folders/Objects/InGame.yy","name":"InGame","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -142,6 +143,7 @@
     {"id":{"name":"Quit_Button","path":"sprites/Quit_Button/Quit_Button.yy",},},
     {"id":{"name":"R","path":"sprites/R/R.yy",},},
     {"id":{"name":"Red_Button","path":"sprites/Red_Button/Red_Button.yy",},},
+    {"id":{"name":"RoadTiles","path":"sprites/RoadTiles/RoadTiles.yy",},},
     {"id":{"name":"Setting_Side_Bar","path":"sprites/Setting_Side_Bar/Setting_Side_Bar.yy",},},
     {"id":{"name":"SettingsIcon","path":"sprites/SettingsIcon/SettingsIcon.yy",},},
     {"id":{"name":"Spike","path":"sprites/Spike/Spike.yy",},},
@@ -173,6 +175,7 @@
     {"id":{"name":"TravelRoadTCross","path":"sprites/TravelRoadTCross/TravelRoadTCross.yy",},},
     {"id":{"name":"WagonIcon","path":"sprites/WagonIcon/WagonIcon.yy",},},
     {"id":{"name":"WarehouseIcon","path":"sprites/WarehouseIcon/WarehouseIcon.yy",},},
+    {"id":{"name":"RoadTileSet","path":"tilesets/RoadTileSet/RoadTileSet.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
