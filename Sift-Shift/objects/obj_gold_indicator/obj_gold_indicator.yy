@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Gold_Coin_Small_Box",
-    "path":"sprites/Gold_Coin_Small_Box/Gold_Coin_Small_Box.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

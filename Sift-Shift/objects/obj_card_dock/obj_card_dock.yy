@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_card_HUD",
-    "path":"sprites/spr_card_HUD/spr_card_HUD.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

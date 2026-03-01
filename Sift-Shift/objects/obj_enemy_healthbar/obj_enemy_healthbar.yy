@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_enemy_healthbar",
-    "path":"sprites/spr_enemy_healthbar/spr_enemy_healthbar.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
