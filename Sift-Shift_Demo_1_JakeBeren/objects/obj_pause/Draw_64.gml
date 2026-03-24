@@ -17,7 +17,7 @@ if (is_paused) {
     
     // 3. DRAW THE MENU PANEL
     var _box_w = 360;
-    var _box_h = 320;
+    var _box_h = 500;
     var _x1 = _gui_w/2 - _box_w/2;
     var _y1 = _gui_h/2 - _box_h/2;
     var _x2 = _gui_w/2 + _box_w/2;
