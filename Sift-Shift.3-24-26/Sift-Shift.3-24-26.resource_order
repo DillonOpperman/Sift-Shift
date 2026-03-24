@@ -1,0 +1,26 @@
+{
+  "FolderOrderSettings":[
+    {"name":"Boot","order":1,"path":"folders/Objects/Boot.yy",},
+    {"name":"Controllers","order":2,"path":"folders/Objects/Controllers.yy",},
+    {"name":"FactoryItems","order":1,"path":"folders/Objects/InGame/FactoryItems.yy",},
+    {"name":"Ores","order":2,"path":"folders/Objects/InGame/Ores.yy",},
+    {"name":"Resources","order":1,"path":"folders/Sprites/InGame/Tiles/Resources.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"Obj_Belt","order":1,"path":"objects/Obj_Belt/Obj_Belt.yy",},
+    {"name":"Obj_Ore_Controller","order":1,"path":"objects/Obj_Ore_Controller/Obj_Ore_Controller.yy",},
+    {"name":"Obj_Warehouse","order":2,"path":"objects/Obj_Warehouse/Obj_Warehouse.yy",},
+    {"name":"Room1","order":1,"path":"rooms/Room1/Room1.yy",},
+    {"name":"Facilities","order":5,"path":"sprites/Facilities/Facilities.yy",},
+    {"name":"Fog","order":7,"path":"sprites/Fog/Fog.yy",},
+    {"name":"Resource","order":9,"path":"sprites/Resource/Resource.yy",},
+    {"name":"RoadTiles","order":2,"path":"sprites/RoadTiles/RoadTiles.yy",},
+    {"name":"Spr_Belt","order":1,"path":"sprites/Spr_Belt/Spr_Belt.yy",},
+    {"name":"FacilityTileSet","order":3,"path":"tilesets/FacilityTileSet/FacilityTileSet.yy",},
+    {"name":"FogTileSet","order":1,"path":"tilesets/FogTileSet/FogTileSet.yy",},
+    {"name":"LandscapeTileSet","order":6,"path":"tilesets/LandscapeTileSet/LandscapeTileSet.yy",},
+    {"name":"ResourceTileSet","order":8,"path":"tilesets/ResourceTileSet/ResourceTileSet.yy",},
+    {"name":"RoadTileSet","order":4,"path":"tilesets/RoadTileSet/RoadTileSet.yy",},
+    {"name":"TileSet5","order":2,"path":"tilesets/TileSet5/TileSet5.yy",},
+  ],
+}
