@@ -21,15 +21,19 @@ if(mouse_check_button_pressed(mb_left)) {
 	var clicked_tile = tilemap_get_at_pixel(map_id, big_x, big_y);
 	
 	//removes 2x2 tile if not empty, -1 is to keep within total 2x2 box
-	if(global.copper > 0) {
-		if(clicked_tile != 0) {
+	if(clicked_tile != 0) {
 			tilemap_set_at_pixel(map_id, 0, big_x, big_y);
 			tilemap_set_at_pixel(map_id, 0, big_x + tile_size - 1, big_y);
 			tilemap_set_at_pixel(map_id, 0, big_x, big_y + tile_size - 1);
 			tilemap_set_at_pixel(map_id, 0, big_x + tile_size - 1, big_y + tile_size - 1);
-		}
-		global.copper --
+			
+			if(global.copper > 0) {
+				global.copper --;
+			}
 	}
+	
+	
+	
 
 }
 	
