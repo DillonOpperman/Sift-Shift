@@ -4,6 +4,7 @@
     {"name":"Obj_Belt","order":16,"path":"objects/Obj_Belt/Obj_Belt.yy",},
     {"name":"Obj_Iron","order":15,"path":"objects/Obj_Iron/Obj_Iron.yy",},
     {"name":"Obj_Mine","order":23,"path":"objects/Obj_Mine/Obj_Mine.yy",},
+    {"name":"obj_pause","order":24,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"Spr_Belt","order":22,"path":"sprites/Spr_Belt/Spr_Belt.yy",},
     {"name":"Spr_Grass","order":1,"path":"sprites/Spr_Grass/Spr_Grass.yy",},
     {"name":"Spr_Iron","order":14,"path":"sprites/Spr_Iron/Spr_Iron.yy",},

@@ -22,6 +22,7 @@
     {"id":{"name":"Obj_Belt","path":"objects/Obj_Belt/Obj_Belt.yy",},},
     {"id":{"name":"Obj_Iron","path":"objects/Obj_Iron/Obj_Iron.yy",},},
     {"id":{"name":"Obj_Mine","path":"objects/Obj_Mine/Obj_Mine.yy",},},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Spr_Belt","path":"sprites/Spr_Belt/Spr_Belt.yy",},},
     {"id":{"name":"Spr_Grass","path":"sprites/Spr_Grass/Spr_Grass.yy",},},
