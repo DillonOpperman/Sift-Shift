@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Material",
-    "path":"folders/Sprites/InGame/Icons/Material.yy",
+    "name":"With_Background",
+    "path":"folders/Sprites/InGame/Icons/Material/With_Background.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
