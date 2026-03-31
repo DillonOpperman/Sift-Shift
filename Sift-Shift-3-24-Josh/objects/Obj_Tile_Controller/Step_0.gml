@@ -6,7 +6,7 @@ hover_x = mx * tile_size;
 hover_y = my * tile_size;
 
 
-//when mouse is clicked on question tiles it rmoves them
+//when mouse is clicked on question tiles it removes them
 if(mouse_check_button_pressed(mb_left)) {
 	// gets the id of buyable layer
 	var layer_id = layer_get_id("Tiles_Buyable");

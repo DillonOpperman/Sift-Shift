@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_CopperOre",
-    "path":"sprites/Spr_CopperOre/Spr_CopperOre.yy",
+    "name":"Spr_CopperOre_clear",
+    "path":"sprites/Spr_CopperOre_clear/Spr_CopperOre_clear.yy",
   },
   "spriteMaskId":null,
   "visible":true,

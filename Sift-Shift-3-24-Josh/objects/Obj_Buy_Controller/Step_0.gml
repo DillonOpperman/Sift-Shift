@@ -6,7 +6,7 @@ hover_x = mx * tile_size;
 hover_y = my * tile_size;
 
 
-//when mouse is clicked on question tiles it rmoves them
+//when mouse is clicked on question tiles it removes them
 if(mouse_check_button_pressed(mb_left)) {
 	// gets the id of buyable layer
 	var layer_id = layer_get_id("Tiles_Buyable");
@@ -21,8 +21,11 @@ if(mouse_check_button_pressed(mb_left)) {
 	var clicked_tile = tilemap_get_at_pixel(map_id, big_x, big_y);
 	
 	//removes 2x2 tile if not empty, -1 is to keep within total 2x2 box
-	if(clicked_tile != 0) {
-			draw_sprite(MineIcon, -1, mx, my)
+	if(clicked_tile == 0) {
+		if(global.copper > 4) {
+			global.copper -= 5
+			instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Mine)
+		}
 	}
 
 }
