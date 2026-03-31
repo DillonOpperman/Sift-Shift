@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_pause",
+  "%Name":"scr_game_logic",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_pause",
+  "name":"scr_game_logic",
   "parent":{
     "name":"Scripts",
     "path":"folders/Objects/Scripts.yy",
