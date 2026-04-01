@@ -1,3 +1,3 @@
-push = 0.05;
+push = 0.15;
 
-sprite_index = Spr_Belt;
+sprite_index = Spr_BeltIcon;

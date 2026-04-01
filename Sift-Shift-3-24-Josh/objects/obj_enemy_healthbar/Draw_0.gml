@@ -2,7 +2,7 @@
 draw_self();
 
 // Set the font
-draw_set_font(fnt_UI);
+draw_set_font(Fnt_UI);
 
 // Set the alignment
 draw_set_valign(fa_middle);

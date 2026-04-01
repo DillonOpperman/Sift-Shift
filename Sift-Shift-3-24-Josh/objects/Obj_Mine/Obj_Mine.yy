@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"MineIcon",
-    "path":"sprites/MineIcon/MineIcon.yy",
+    "name":"Spr_MineIcon",
+    "path":"sprites/Spr_MineIcon/Spr_MineIcon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

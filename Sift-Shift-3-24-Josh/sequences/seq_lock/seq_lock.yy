@@ -27,7 +27,7 @@
   "name":"seq_lock",
   "parent":{
     "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "path":"folders/Discard?/Sequences.yy",
   },
   "playback":1,
   "playbackSpeed":34.0,

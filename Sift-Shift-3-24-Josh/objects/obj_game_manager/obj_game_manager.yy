@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Managers",
-    "path":"folders/Objects/InGame/Managers.yy",
+    "path":"folders/Discard?/Managers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

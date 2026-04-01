@@ -3,8 +3,8 @@
   "%Name":"sh_greyscale",
   "name":"sh_greyscale",
   "parent":{
-    "name":"Shaders",
-    "path":"folders/Shaders.yy",
+    "name":"Discard?",
+    "path":"folders/Discard?.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

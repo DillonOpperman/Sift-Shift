@@ -26,7 +26,7 @@ draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 
 // Set the font and colour
-draw_set_font(fnt_UI);
+draw_set_font(Fnt_UI);
 draw_set_color(#eed8cd);
 
 // Draw the text

@@ -3,8 +3,8 @@
   "%Name":"sh_draw_window",
   "name":"sh_draw_window",
   "parent":{
-    "name":"Shaders",
-    "path":"folders/Shaders.yy",
+    "name":"Discard?",
+    "path":"folders/Discard?.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

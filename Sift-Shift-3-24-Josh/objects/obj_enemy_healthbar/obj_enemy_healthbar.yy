@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Enemy",
-    "path":"folders/Objects/InGame/Enemy.yy",
+    "path":"folders/Discard?/Enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

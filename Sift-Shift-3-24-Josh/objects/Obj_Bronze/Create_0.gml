@@ -1,2 +1,2 @@
 event_inherited();
-item_type = 524287;
+item_type = 4;

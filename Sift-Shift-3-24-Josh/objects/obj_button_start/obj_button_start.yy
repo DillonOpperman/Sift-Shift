@@ -10,8 +10,8 @@
   "name":"obj_button_start",
   "overriddenProperties":[],
   "parent":{
-    "name":"Main Menu",
-    "path":"folders/Objects/UI/Main Menu.yy",
+    "name":"Main Menu1",
+    "path":"folders/Discard?/Main Menu1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

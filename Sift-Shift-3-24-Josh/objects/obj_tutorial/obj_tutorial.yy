@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Popups",
-    "path":"folders/Objects/InGame/Popups.yy",
+    "path":"folders/Discard?/Popups.yy",
   },
   "parentObjectId":null,
   "persistent":false,

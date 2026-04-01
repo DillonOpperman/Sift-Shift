@@ -11,8 +11,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},"propertyId":{"name":"has_background","path":"objects/obj_button_parent/obj_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
   ],
   "parent":{
-    "name":"Main Menu",
-    "path":"folders/Objects/UI/Main Menu.yy",
+    "name":"Main Menu1",
+    "path":"folders/Discard?/Main Menu1.yy",
   },
   "parentObjectId":{
     "name":"obj_button_parent",

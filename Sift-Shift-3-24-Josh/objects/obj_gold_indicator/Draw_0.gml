@@ -5,7 +5,7 @@ draw_self();
 draw_sprite_ext(spr_gold_coin, 0, x, y - 20, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 
 // Set the font
-draw_set_font(fnt_UI);
+draw_set_font(Fnt_UI);
 
 // Set the text alignments
 draw_set_valign(fa_middle);

@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"WarehouseIcon",
-    "path":"sprites/WarehouseIcon/WarehouseIcon.yy",
+    "name":"Spr_WarehouseIcon",
+    "path":"sprites/Spr_WarehouseIcon/Spr_WarehouseIcon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

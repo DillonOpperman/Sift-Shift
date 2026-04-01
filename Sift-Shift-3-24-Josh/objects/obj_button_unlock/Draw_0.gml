@@ -55,13 +55,13 @@ draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 
 // Set the font
-draw_set_font(fnt_UI);
+draw_set_font(Fnt_UI);
 
 // Draw the text on the button
 if(any_locked) 
 {
 	draw_text_transformed(x - 60 * draw_xscale, center_y, "Unlock", draw_xscale, draw_yscale, image_angle);
-	draw_num(x + 100 * draw_xscale, center_y, draw_xscale, draw_yscale, fnt_UI, card_unlock);
+	draw_num(x + 100 * draw_xscale, center_y, draw_xscale, draw_yscale, Fnt_UI, card_unlock);
 } 
 else 
 {

@@ -9,7 +9,7 @@ if(open)
 	draw_set_valign(fa_middle);
 
 	// Set the font 
-	draw_set_font(fnt_UI);
+	draw_set_font(Fnt_UI);
 
 	// Draw the text
 	draw_text(x, y - 100, align_string(text, str_length));

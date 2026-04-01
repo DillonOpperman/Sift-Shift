@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"UI",
-    "path":"folders/Objects/InGame/UI.yy",
+    "path":"folders/Discard?/UI.yy",
   },
   "parentObjectId":{
     "name":"obj_button_parent",

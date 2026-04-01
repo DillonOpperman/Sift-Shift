@@ -13,8 +13,8 @@
   "name":"obj_button_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Discard?",
+    "path":"folders/Discard?.yy",
   },
   "parentObjectId":null,
   "persistent":false,

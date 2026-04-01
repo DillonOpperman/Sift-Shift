@@ -2,7 +2,7 @@ function spawn_tutorial(tut_setup)
 {
 	var tut = instance_create_layer(0, 0, "Popups", obj_tutorial);
 	
-	draw_set_font(fnt_UI);
+	draw_set_font(Fnt_UI);
 	
 	with(tut) {
 		text = tut_setup.text;

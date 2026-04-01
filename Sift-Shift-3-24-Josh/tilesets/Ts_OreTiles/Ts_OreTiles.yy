@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Spr_ResourceTiles",
-    "path":"sprites/Spr_ResourceTiles/Spr_ResourceTiles.yy",
+    "name":"Spr_OreTiles",
+    "path":"sprites/Spr_OreTiles/Spr_OreTiles.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

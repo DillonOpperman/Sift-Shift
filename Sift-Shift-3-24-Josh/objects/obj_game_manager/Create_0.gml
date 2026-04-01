@@ -56,7 +56,7 @@ font_enable_effects(fnt_card_name, true, {
 	outlineDistance: 2,
 	outlineColour: c_black
 });
-font_enable_effects(fnt_UI, true, {
+font_enable_effects(Fnt_UI, true, {
 	outlineEnable: true,
 	outlineDistance: 2,
 	outlineColour: c_black

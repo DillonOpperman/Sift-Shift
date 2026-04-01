@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_TInOre_clear",
-    "path":"sprites/Spr_TInOre_clear/Spr_TInOre_clear.yy",
+    "name":"Spr_TinOre_clear",
+    "path":"sprites/Spr_TinOre_clear/Spr_TinOre_clear.yy",
   },
   "spriteMaskId":null,
   "visible":true,

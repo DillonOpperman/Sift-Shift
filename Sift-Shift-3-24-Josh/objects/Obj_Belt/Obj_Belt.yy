@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_Belt",
-    "path":"sprites/Spr_Belt/Spr_Belt.yy",
+    "name":"Spr_BeltIcon",
+    "path":"sprites/Spr_BeltIcon/Spr_BeltIcon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

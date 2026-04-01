@@ -14,7 +14,7 @@ else if(has_text) // Otherwise, if it's a background with text
 	draw_sprite_ext(sprite_index, 0, x, y, image_xscale * target_scale, image_yscale * target_scale, image_angle, image_blend, image_alpha);
 	
 	// Set the font
-	draw_set_font(fnt_UI);
+	draw_set_font(Fnt_UI);
 	
 	// Set the text alignments
 	draw_set_halign(fa_center);

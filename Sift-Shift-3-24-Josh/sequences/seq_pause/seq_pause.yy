@@ -27,7 +27,7 @@
   "name":"seq_pause",
   "parent":{
     "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "path":"folders/Discard?/Sequences.yy",
   },
   "playback":0,
   "playbackSpeed":15.0,
