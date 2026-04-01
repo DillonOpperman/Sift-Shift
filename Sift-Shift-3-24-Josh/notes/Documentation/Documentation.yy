@@ -4,7 +4,7 @@
   "name":"Documentation",
   "parent":{
     "name":"Notes",
-    "path":"folders/Notes.yy",
+    "path":"folders/Discard?/Notes.yy",
   },
   "resourceType":"GMNotes",
   "resourceVersion":"2.0",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"TileSets",
-    "path":"folders/TileSets.yy",
+    "name":"Landscape",
+    "path":"folders/Sprites/InGame/Tiles/Landscape.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

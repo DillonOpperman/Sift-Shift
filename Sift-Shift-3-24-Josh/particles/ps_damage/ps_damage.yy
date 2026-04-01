@@ -18,7 +18,7 @@
   "name":"ps_damage",
   "parent":{
     "name":"Particle Systems",
-    "path":"folders/Particle Systems.yy",
+    "path":"folders/Discard?/Particle Systems.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

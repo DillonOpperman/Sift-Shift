@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Cards",
-    "path":"folders/Objects/InGame/Cards.yy",
+    "path":"folders/Discard?/Cards.yy",
   },
   "parentObjectId":null,
   "persistent":false,

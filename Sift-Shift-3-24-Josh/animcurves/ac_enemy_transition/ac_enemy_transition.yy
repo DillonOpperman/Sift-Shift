@@ -11,7 +11,7 @@
   "name":"ac_enemy_transition",
   "parent":{
     "name":"Animation Curves",
-    "path":"folders/Animation Curves.yy",
+    "path":"folders/Discard?/Animation Curves.yy",
   },
   "resourceType":"GMAnimCurve",
   "resourceVersion":"2.0",

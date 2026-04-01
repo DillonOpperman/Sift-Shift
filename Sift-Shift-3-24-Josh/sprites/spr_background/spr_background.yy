@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"InGame",
-    "path":"folders/Sprites/InGame.yy",
+    "name":"Discard?",
+    "path":"folders/Discard?.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

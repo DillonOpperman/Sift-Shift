@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_card_dock",
+  "%Name":"Obj_Iron",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_card_dock",
+  "name":"Obj_Iron",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cards",
-    "path":"folders/Discard?/Cards.yy",
+    "name":"Ores",
+    "path":"folders/Objects/InGame/Ores.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_Ore_Controller",
+    "path":"objects/Obj_Ore_Controller/Obj_Ore_Controller.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_IronOre_clear",
+    "path":"sprites/Spr_IronOre_clear/Spr_IronOre_clear.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

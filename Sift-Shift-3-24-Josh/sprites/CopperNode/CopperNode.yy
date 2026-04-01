@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Resources",
-    "path":"folders/Sprites/InGame/Tiles/Resources.yy",
+    "name":"Discard?",
+    "path":"folders/Discard?.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

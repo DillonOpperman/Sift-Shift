@@ -1,25 +1,25 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"ResourceTileSet",
+  "%Name":"Ts_OreTiles",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"ResourceTileSet",
-  "out_columns":16,
+  "name":"Ts_OreTiles",
+  "out_columns":8,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Discard?",
-    "path":"folders/Discard?.yy",
+    "name":"TileSets",
+    "path":"folders/TileSets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Resource",
-    "path":"sprites/Resource/Resource.yy",
+    "name":"Spr_ResourceTiles",
+    "path":"sprites/Spr_ResourceTiles/Spr_ResourceTiles.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -34,5 +34,5 @@
   "tileWidth":32,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":256,
+  "tile_count":64,
 }
