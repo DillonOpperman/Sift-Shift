@@ -85,7 +85,7 @@
     {"name":"Spr_SmelterIcon","order":4,"path":"sprites/Spr_SmelterIcon/Spr_SmelterIcon.yy",},
     {"name":"Spr_Timber_clear","order":19,"path":"sprites/Spr_Timber_clear/Spr_Timber_clear.yy",},
     {"name":"Spr_Timber","order":12,"path":"sprites/Spr_Timber/Spr_Timber.yy",},
-    {"name":"Spr_TinIngot_clear","order":23,"path":"sprites/Spr_TinIngot_clear/Spr_TinIngot_clear.yy",},
+    {"name":"Spr_TinIngot_clear","order":25,"path":"sprites/Spr_TinIngot_clear/Spr_TinIngot_clear.yy",},
     {"name":"Spr_TinIngot","order":22,"path":"sprites/Spr_TinIngot/Spr_TinIngot.yy",},
     {"name":"Spr_TinOre_clear","order":24,"path":"sprites/Spr_TinOre_clear/Spr_TinOre_clear.yy",},
     {"name":"Spr_TinOre","order":21,"path":"sprites/Spr_TinOre/Spr_TinOre.yy",},
