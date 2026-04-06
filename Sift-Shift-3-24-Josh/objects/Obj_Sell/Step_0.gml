@@ -1,0 +1,34 @@
+hovering = position_meeting(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), id)
+
+if (hovering && mouse_check_button_pressed(mb_left)) 
+{
+	clicked = true
+} 
+
+if (mouse_check_button_released(mb_left)) 
+{
+	clicked = false;
+	if (hovering) 
+	{
+		global.gold += global.copper + global.iron + global.tin + global.bronze + global.silver
+		global.copper = 0
+		global.iron = 0
+		global.tin = 0
+		global.bronze = 0
+		global.silver = 0
+	}
+	
+} 
+
+if (clicked) 
+{
+	image_index = 2;
+} 
+else if (hovering) 
+{
+	image_index = 1;
+} 
+else 
+{
+	image_index = 0;
+} 
