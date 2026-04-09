@@ -1,0 +1,391 @@
+This note is high-level documentation for the core parts of this template project.
+All events in this project are commented, so you can open any event and read the comments to understand what it does, and how it works.
+
+
+# ANIMATION CURVES
+
+There are 2 animation curves in this project
+
+ac_card_flip
+	animation curve used for animating cards being flipped after being unlocked
+	
+ac_enemy_transition
+	animation curve used to displace enemies during the transition up and down difficulties
+
+# FONTS
+
+There are 5 fonts in this project
+
+fnt_card
+	A font used to put text ability descriptions on cards
+	
+fnt_card_name
+	A font used to put names on cards
+
+fnt_enemy
+	A font used to draw enemy names
+
+fnt_HUD
+	A font used to display prominent information such as tutorials and numbers
+
+fnt_UI
+	A font smaller than the HUD font used to display regular information
+
+# OBJECTS
+
+There are 27 objects in this project
+
+obj_card
+	UI object to show unlocked/unlocked abilities
+	
+	Create					Define the card's ability
+	
+		set_build			Set up the card's variables and efects
+		quick_unlock		Unlock the card wtithout needing to see the flip animation
+	
+	Step					Handle the card's unlocking procedure
+	Draw					Draw the card and write its ability onto it
+
+obj_card_dock
+	UI object that holds all the cards and gives them a background to sit on
+
+	Create					Define a function to spawn the cards and create an array to store them
+
+obj_button_enemy_down
+	UI object child of obj_button_parent that lowers the enemy difficulty
+	
+	Create					Define the press function to lower the difficulty
+	Step					Handle the enemy transition animation
+	Draw					Make the button slightly transparent if there are no lower difficulties
+
+obj_button_enemy_up
+	UI object child of obj_button_parent that raises the enemy difficulty
+	
+	Create					Define the press function to raise the difficulty
+	Step					Handle the enemy transition animation
+	Draw					Make the button slightly transparent if there are no higher difficulties
+
+obj_enemy
+	Game object that acts as an enemy for the player to click on
+	
+	Create					Assemble an enemy depending on the current chosen difficulty, whether the save file has anything non-standard, and whether any on-appear effects trigger
+	Destroy					Destroy all associated instances (name plate, health bar, gold indicator) and the particle system
+	End Step				Make the associated instances match image alpha and offset in the x axis and handle whether the enemy is on fire
+	Draw					Draw the shadow, the particle system, and the enemy
+	Left Pressed			Damage the enemy
+	User Event 1			Trigger on-kill effects and generate a new enemy
+
+obj_enemy_healthbar
+	UI object that shows how much health the current enemy has
+	
+	Create					Sets display variables like size and default health values
+	Draw					Draw this object, then draw how much health the enemy has
+
+obj_enemy_name
+	UI object that shows the enemy's name
+	
+	Create					Sets the width and, because the sprite is 9-sliced, expands it sideways for full name to fit
+	Draw					Draws itself and then the name on top
+
+obj_game_manager
+	Manager object that managers the overarching game logic
+	
+	Create					Set up game variables like the bank and enable font effects
+	
+		on_click			Trigger all on-click effects
+		on_kill				Trigger all on-kill effects
+		on_appear			Trigger all on-appear effects
+	
+	Step					Calculate the amomunt of damage to do to the enemy and check if the player has won yet
+	Draw					Draw a paused version of the screen if the player has paused the game so objects don't just disappear when they're deactivated
+
+obj_particle_manager
+	Manager object that holds the main particle system
+	
+	Create					Instantiate a particle system for bursts
+	
+		reset				Clear the particle system
+	
+	Destroy					Destroy the particle system
+	Step					Create an effect in the particle system if the player's gold amount has changed
+
+
+obj_save_manager
+	Manager object that handles the save file
+	
+	Create					Set up functions to save, load, and reset the game and set up a time source to save every 5 seconds
+	
+		load				Load the data from the save file
+		save				Save the game's data to the save file
+		reset				Reset the game's data back to its original state
+	
+	Destroy					Destroy the save time source
+
+obj_tutorial_manager
+	Manager object that handles the game opening logic
+	
+	Create					Check if there is a save file and load the game if there is
+	Draw					If this is the first time this event has triggered, pause the game and set up a tutorial or instance of obj_away_popup 
+
+obj_away_popup
+	UI object that tells the player how much gold they earned while the game was closed
+	
+	Create					Set up the variables to display
+	
+		setup				Set up the timing variables to display
+	
+	Destroy					Either resume the game or spawn an instance of obj_win_box depending on whether the game is won or not
+	Draw					Find how long it's been since the game was last opened and display the amount of gold and enemies killed in that time
+	Global Left Released	Resume the game and destroy itself
+
+obj_tutorial
+	UI object that teaches the player about the basic mechanics of the game
+	
+	Create					Set up variables like the unshaded section of the screen and whether the tutorial is opening or closing
+	Destroy					Either spawn the next tutorial or resume the game
+	Step					Make the unshaded window expand or contract depending on whether the tutorial is opening or closing
+	Draw					Draw the paused game screen using the window shader so part is not shaded and then draw brackets around it
+	Global Left Released	Destroy this tutorial
+
+obj_win_box
+	UI object that tells the user that they've won the game
+	
+	Create					Set up the text and variables to hold the IDs of the menu and reset buttons
+	Destroy					Delete the save file and resume the game
+	Step					If the game isn't fully open yet, make the window expand
+	Draw					Draw the background window and the text on top of it
+	
+obj_bank
+	UI object that shows how much gold the player has
+	
+	Draw					Draw itself and the amount of gold the player has
+
+obj_button_menu
+	UI object child of obj_button_parent that moves the game back to the main menu
+	
+	Create					Set the press function to take the game back to the main menu and end of room logic
+
+obj_button_options
+	UI object child of obj_button_parent that opens a pause menu
+	
+	Create					Set the press function to pause everything and create an seq_pause sequence
+
+obj_button_reset
+	UI object child of obj_button_parent that resets the game without moving back to the main menu
+	
+	Create					Set the press function to reset the game to its original state
+
+obj_button_resume
+	UI object child of obj_button_parent that destroys the pause menu and resume's the game
+	
+	Create					Set the press function to resume the game and destroy the pause sequence
+
+obj_button_unlock
+	UI object child of obj_button_parent that unlocks another card for the player
+	
+	Create					Set the press function to unlock a card for a price
+	Draw Begin				Check whether the player has enough gold to unlock a card and change the animation of the lock depending
+	Draw					Draw itself and then how much gold it costs to unlock another card
+
+obj_dps
+	UI object that shows how much damage the player is doing per second
+	
+	Create					Create an array for every recent click the player has made and how much damage it did
+	
+		add_to_dps			Function for use with array_foreach to add up the damage from all clicks in the past second
+	
+	Step					Check whether a recorded click was over a second ago and remove its record if it is. Then add up all the clicks' damages
+	Draw					Draw itself and the amount of damage the player has done in the last second
+
+obj_gold_indicator
+	UI object that shows how much gold an enemy is worth
+	
+	Draw					Draw how much is in the player's bank to the screen
+
+obj_lock
+	UI object that shows a card and lock asset for use with obj_button_unlock
+	
+	Create					Create a sequence to act as this object's animation
+	Draw					Draw a card back and then draw the lock
+
+obj_button_mute
+	UI object child of obj_button_parent that mutes and unmutes all sound in the game
+	
+	Create					Set the press function to flip whether the game is muted and the button's icon
+
+obj_button_quit
+	UI object child of obj_button_parent that lets the player quit the game
+	
+	Create					Set the press function to end the game
+
+obj_button_start
+	UI object that moves the game to the game room
+	
+	Create					Set the "mode" to 0 which translates to the button growing
+	Step					Depending on the mode's value either grow or shrink
+	Global Left Released	Move to the next room (the game room)
+
+obj_button_parent
+	UI parent object that gives buttons visual feedback behaviours
+	
+	Create					Set up a press function to be overwritten by child objects
+	
+		press_function		A virtual function to be overwritten by child objects
+	
+	Draw					Depending on the button's format, draw the button slightly differently and only the main element of the button should change
+	Left Pressed			Make the button's element shrink
+	Left Released			Make the button's element grow and trigger the press function
+	Mouse Enter				Make the button's element grow
+	Mouse Leave				Make the button's element shrink back to normal
+	
+# PARTICLE SYSTEMS
+
+There are 8 particle systems in this project
+
+ps_card_reveal
+	A particle effect used when a card is unlocked
+
+ps_character_idle
+	A particle system that shows behind the enemies and gives them an aura of power
+
+ps_crit_left
+	A particle system that creates a critical hit effect that moves to the left
+
+ps_crit_right
+	A particle system that creates a critical hit effect that moves to the right
+
+ps_damage
+	A particle effect to show that the player has clicked and damaged an enemy
+
+ps_dust
+	A particle system that adds dust to the room
+	
+ps_fire
+	A particle system that creates a plume of flame effect
+
+ps_gold
+	A particle effect to show that the player has gained or lost gold
+
+# ROOMS
+
+There are 2 rooms in this project
+
+rm_main_menu
+	The main menu for the game
+
+	Instances				Instance layer for buttons
+	Background				Background layer so the game is not in a void
+
+rm_game
+	The room for the actual game
+	
+	Popups					Instance layer for popups like tutorials and the pause menu
+	Managers				Instance layer for the object managers so that they can be drawn after the rest of the game and see the regular game screen
+	UI_Interactible			Instance layer for UI objects
+	UI_Background			Instance layer for UI objects that should appear behind the other ones
+	Assets_Background		Asset layer for background elements like the dust and top HUD
+	Enemy					Instance layer for the enemies
+	Background				Background layer so the game is not in a void
+
+# SCRIPTS
+
+There are 4 scripts in this project
+
+scr_cards
+	Script to collect all the card descriptions and abilities in an easily accessible place as well as making their abilities easier to read
+	
+	get_cards				Returns all the card structures as a list
+	
+	accumulate_stats		Returns the amount of a stat specified when called as given by the cards
+
+scr_draw_text
+	Script to draw text on multiple lines and shorten numbers
+	
+	align_string			Returns the same string put in but broken onto multiple lines with a specified maximum length
+		
+	draw_text_line			Draws a string broken onto lines with specified length
+		
+	shorten_num				Returns a number as a string in a format where it is presented as the largest of billions, millions, or thousands
+	
+	draw_num				Draws a number shortened by shorten_num
+		
+scr_pause
+	Script to pause and unpause the game
+	
+	pause_everything		Deactivates the enemy and particles
+		
+	resume_everything		Reactivates the enemy and particles
+
+scr_tutorials
+	Script to create tutorials for the start of the game
+	
+	spawn_tutorial			Spawn a tutorial object then set its window and the text it should say
+		
+	spawn_tut_enemy			Spawn a tutorial to explain the enemies
+	
+	spawn_tut_difficulty	Spawn a tutorial to explain the enemy difficulties
+	
+	spawn_tut_cards			Spawn a tutorial to explain the cards
+
+# SEQUENCES
+
+There are 2 sequence in this project
+
+seq_pause
+	Sequence to display a pause menu
+	
+seq_lock
+	Sequence to animate a lock
+
+# SHADERS
+
+sh_draw_window
+	Shader to draw a black rectangle over the screen except for a window
+	
+sh_greyscale
+	Shader to draw in greyscale
+
+# SOUNDS
+
+SOUNDS TBA######################################################################################################################################################################################################################
+
+# SPRITES
+
+There are 50 sprites in this project
+
+They are organised by their use
+	InGame
+		Sprites that appear in the main game
+		Cards
+			Sprites used by cards
+			Icons
+				Sprites used as icons on the cards
+		Enemies
+			Sprites used by different enemy types
+		UI
+			Sprites used in the UI
+			Backgrounds
+				Sprites used as backgrounds for UI elements
+			Buttons
+				Sprites used as a part of different buttons
+			Icons
+				Sprites used as icons in UI elements
+			Lock
+				Sprites used in the lock animation
+	Main Menu
+		Sprites used in the main menu
+	Particles
+		Sprites used in particle effects
+
+~~ Possible Edits! ~~
+
+If you want to edit parts of this project to make it more unique and personal feel free to!
+
+Why not try:
+	- Creating some more cards
+	- Adding some more enemies
+	- Adding card upgrades
+	- Adding prestige levels
+	- Or use this as an idea of how to make your own game from scratch!
+	
+Don't forget to share what you make to gx.games so others can play your game too!

@@ -1,0 +1,6 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"Obj_Map_Generation_Controller","order":1,"path":"objects/Obj_Map_Generation_Controller/Obj_Map_Generation_Controller.yy",},
+  ],
+}
