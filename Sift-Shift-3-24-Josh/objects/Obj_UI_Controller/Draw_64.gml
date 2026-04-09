@@ -49,6 +49,29 @@ draw_text_ext_colour(margin + 30, margin + (spacing * 8 - 2), "= " + string(glob
 draw_sprite_ext(Spr_SilverIngot, 0, margin, margin + (spacing * 9), 1, 1, 0, c_white, inventory_alpha);
 draw_text_ext_colour(margin + 30, margin + (spacing * 9 - 2), "= " + string(global.silverIngot), 5, 300, c_black, c_black, c_black, c_black, inventory_alpha);
 
+
+//draws silver icon sprite and amount in top left of screen
+draw_sprite_ext(Spr_Timber, 0, margin, margin + (spacing * 10), 1, 1, 0, c_white, inventory_alpha);
+draw_text_ext_colour(margin + 30, margin + (spacing * 10 - 2), "= " + string(global.timber), 5, 300, c_black, c_black, c_black, c_black, inventory_alpha);
+
+//draws silver icon sprite and amount in top left of screen
+draw_sprite_ext(Spr_Lumber, 0, margin, margin + (spacing * 11), 1, 1, 0, c_white, inventory_alpha);
+draw_text_ext_colour(margin + 30, margin + (spacing * 11 - 2), "= " + string(global.lumber), 5, 300, c_black, c_black, c_black, c_black, inventory_alpha);
+
+
+//draws tin icon sprite and amount in top left of screen
+draw_sprite_ext(Spr_CopperTools, 0, margin, margin + (spacing * 12), 1, 1, 0, c_white, inventory_alpha);
+draw_text_ext_colour(margin + 30, margin + (spacing * 12 - 2), "= " + string(global.copperTools), 5, 300, c_black, c_black, c_black, c_black, inventory_alpha);
+
+//draws bronze icon sprite and amount in top left of screen
+draw_sprite_ext(Spr_IronTools, 0, margin, margin + (spacing * 13), 1, 1, 0, c_white, inventory_alpha);
+draw_text_ext_colour(margin + 30, margin + (spacing * 13 - 2), "= " + string(global.ironTools), 5, 300, c_black, c_black, c_black, c_black, inventory_alpha);
+
+//draws silver icon sprite and amount in top left of screen
+draw_sprite_ext(Spr_BronzeTools, 0, margin, margin + (spacing * 14), 1, 1, 0, c_white, inventory_alpha);
+draw_text_ext_colour(margin + 30, margin + (spacing * 14 - 2), "= " + string(global.bronzeTools), 5, 300, c_black, c_black, c_black, c_black, inventory_alpha);
+
+
 draw_sprite_ext(Spr_Bar, -1, 0, 385, 6, 6, 0, c_white, 1)
 
 draw_set_colour(c_white)
@@ -62,7 +85,7 @@ draw_sprite_ext(Spr_MineIcon_fake, -1, build_margin + (facility_margin * 1), 700
 draw_sprite_ext(Spr_SmelterIcon_fake, -1, build_margin + (facility_margin * 2), 700, 2, 2, 0, c_white, 1)
 draw_sprite_ext(Spr_BlacksmithIcon_fake, -1, build_margin + (facility_margin * 3), 700, 2, 2, 0, c_white, 1)
 draw_sprite_ext(Spr_SawmillIcon_fake, -1, build_margin + (facility_margin * 4), 700, 2, 2, 0, c_white, 1)
-draw_sprite_ext(Spr_WindmillIcon_fake, -1, build_margin + (facility_margin * 5), 700, 2, 2, 0, c_white, 1)
+draw_sprite_ext(Spr_TimbermillIcon_fake, -1, build_margin + (facility_margin * 5), 700, 2, 2, 0, c_white, 1)
 draw_sprite_ext(Spr_WarehouseIcon_fake, -1, build_margin + (facility_margin * 6), 700, 2, 2, 0, c_white, 1)
 draw_sprite_ext(Spr_Destroy, -1, build_margin + (facility_margin * 7), 700, 2, 2, 0, c_white, 1)
 

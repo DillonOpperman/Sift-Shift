@@ -12,8 +12,8 @@
     "path":"folders/Objects/InGame/Ingots.yy",
   },
   "parentObjectId":{
-    "name":"Obj_Ore_Controller",
-    "path":"objects/Obj_Ore_Controller/Obj_Ore_Controller.yy",
+    "name":"Obj_Resource_Controller",
+    "path":"objects/Obj_Resource_Controller/Obj_Resource_Controller.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

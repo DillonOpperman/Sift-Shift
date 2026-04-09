@@ -50,8 +50,10 @@
           -8,17,1,24,-6,25,1,26,-68,17,
         ],"TileDataFormat":1,},"tilesetId":{"name":"FogTileSet","path":"tilesets/FogTileSet/FogTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_Resource","depth":-1199,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Resource","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":16,"SerialiseWidth":16,"TileCompressedData":[
-          -135,-2147483648,2,3,2,-3,-2147483648,-2,0,-11,-2147483648,5,1,0,2,-2147483648,3,-29,-2147483648,3,4,
-          -2147483648,5,-66,-2147483648,
+          -17,-2147483648,3,11,-2147483648,12,-29,-2147483648,1,12,-17,-2147483648,1,11,-13,-2147483648,1,11,-53,
+          -2147483648,2,3,2,-3,-2147483648,-2,0,-11,-2147483648,6,1,0,2,-2147483648,3,11,-28,-2147483648,3,4,-2147483648,
+          5,-13,-2147483648,1,11,-14,-2147483648,5,11,12,-2147483648,-2147483648,12,-12,-2147483648,-2,12,-19,
+          -2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"Ts_OreTiles","path":"tilesets/Ts_OreTiles/Ts_OreTiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_Base","depth":-1099,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Base","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":16,"SerialiseWidth":16,"TileCompressedData":[
           1,48,-5,18,6,48,19,64,36,36,65,-4,66,12,18,16,18,32,21,34,34,35,80,36,36,65,-4,66,-4,18,1,19,-6,36,1,

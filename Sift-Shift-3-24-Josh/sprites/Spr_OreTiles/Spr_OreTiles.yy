@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"Spr_OreTiles",
   "bboxMode":0,
-  "bbox_bottom":31,
+  "bbox_bottom":63,
   "bbox_left":0,
   "bbox_right":191,
   "bbox_top":0,

@@ -1,4 +1,4 @@
-var it = instance_place(x, y, Obj_Ore_Controller);
+var it = instance_place(x, y, Obj_Resource_Controller);
 
 image_index = dir;
 
