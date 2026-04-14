@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"Fog",
   "bboxMode":0,
-  "bbox_bottom":127,
+  "bbox_bottom":191,
   "bbox_left":0,
   "bbox_right":159,
   "bbox_top":0,
