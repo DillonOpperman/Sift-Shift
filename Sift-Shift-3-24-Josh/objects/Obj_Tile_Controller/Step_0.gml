@@ -25,7 +25,7 @@ if(mouse_check_button_pressed(mb_left)) {
 			
 			
 			if(global.gold > 0) {
-				global.gold --;
+				//global.gold--;
 				tilemap_set_at_pixel(map_id, 0, big_x, big_y);
 				tilemap_set_at_pixel(map_id, 0, big_x + tile_size - 1, big_y);
 				tilemap_set_at_pixel(map_id, 0, big_x, big_y + tile_size - 1);

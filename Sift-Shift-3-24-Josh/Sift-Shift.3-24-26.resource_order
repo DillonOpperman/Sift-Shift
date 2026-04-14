@@ -38,6 +38,8 @@
     {"name":"Obj_IronIngot","order":1,"path":"objects/Obj_IronIngot/Obj_IronIngot.yy",},
     {"name":"Obj_IronTools","order":1,"path":"objects/Obj_IronTools/Obj_IronTools.yy",},
     {"name":"Obj_Lumber","order":1,"path":"objects/Obj_Lumber/Obj_Lumber.yy",},
+    {"name":"Obj_Map_Controller","order":4,"path":"objects/Obj_Map_Controller/Obj_Map_Controller.yy",},
+    {"name":"Obj_Pause_Controller","order":5,"path":"objects/Obj_Pause_Controller/Obj_Pause_Controller.yy",},
     {"name":"Obj_Resource_Controller","order":1,"path":"objects/Obj_Resource_Controller/Obj_Resource_Controller.yy",},
     {"name":"Obj_Sawmill","order":5,"path":"objects/Obj_Sawmill/Obj_Sawmill.yy",},
     {"name":"Obj_Silver","order":4,"path":"objects/Obj_Silver/Obj_Silver.yy",},

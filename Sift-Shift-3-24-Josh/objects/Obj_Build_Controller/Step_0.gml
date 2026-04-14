@@ -22,24 +22,56 @@ if(mouse_check_button_pressed(mb_left)) {
 	//gets tile at mouse position
 	var clicked_tile = tilemap_get_at_pixel(map_id, big_x, big_y);
 	
-	//removes 2x2 tile if not empty, -1 is to keep within total 2x2 box
+	//build a facility on a tile if the player has enough gold
 	if(clicked_tile == 0 && !Obj_Sell.hovering) {
-		if(global.gold > 0) {
-			global.gold -= 1
 			switch(facility){
-				case 1: instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Belt); break;
-				case 2: instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Mine); break;
-				case 3: instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Smelter); break;
-				case 4: instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Blacksmith); break;
-				case 5: instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Sawmill); break;
-				case 6: instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Timbermill); break;
-				case 7: instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Warehouse); break;
-				case 8: instance_destroy(hovered_facility); break;
+				case 1:
+				if(global.gold >= 1){
+					global.gold -= 1;
+					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Belt); 
+				}
+				break;
+				case 2:
+				if(global.gold >= 16){
+					global.gold -= 16;
+					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Mine); 
+				}
+				break;
+				case 3:
+				if(global.gold >= 32){
+					global.gold -= 32;
+					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Smelter); 
+				}
+				break;
+				case 4:
+				if(global.gold >= 64){
+					global.gold -= 64;
+					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Blacksmith);
+				}
+				break;
+				case 5:
+				if(global.gold >= 32){
+					global.gold -= 32;
+					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Sawmill); 
+				}
+				break;
+				case 6:
+				if(global.gold >= 16){
+					global.gold -= 16;
+					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Timbermill); 
+				}
+				break;
+				case 7:
+				if(global.gold >= 128){
+					global.gold -= 128;
+					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Warehouse); 
+				}
+				break;
+				case 8:
+				instance_destroy(hovered_facility);
+				break;
 			}
-			
-		}
 	}
-
 }
 	
 	

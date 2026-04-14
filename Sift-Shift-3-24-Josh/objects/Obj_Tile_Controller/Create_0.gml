@@ -1,6 +1,6 @@
 tile_size = 32;
 
-global.gold = 100;
+global.gold = 250;
 global.copper = 0;
 global.iron = 0;
 global.tin = 0;

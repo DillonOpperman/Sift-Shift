@@ -9,11 +9,21 @@ if(spawn_timer >= spawn_interval) {
 		var sy = y - tile;
 		
 		if (instance_place(sx, sy, ingot_object) == noone) {
-			if(current_fuel > 0){
-			current_fuel--
-			var it = instance_create_layer(sx, sy, "In_Resources", ingot_object);
-			it.vx = 0;
-			it.vy = 0;
+			if(item_type == 13){
+				if(global.copper > 0 && global.tin > 0){
+					global.copper--
+					global.tin--
+					var it = instance_create_layer(sx, sy, "In_Resources", ingot_object);
+					it.vx = 0;
+					it.vy = 0;
+				}
+			} else {
+				if(current_fuel > 0){
+					current_fuel--
+					var it = instance_create_layer(sx, sy, "In_Resources", ingot_object);
+					it.vx = 0;
+					it.vy = 0;
+				}
 			}
 		}
 	}
