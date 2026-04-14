@@ -26,10 +26,10 @@
     {"$GMRTileLayer":"","%Name":"Roads","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Roads","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":34,"SerialiseWidth":60,"TileCompressedData":[-991,-2147483648,1,1,-62,-2147483648,1,0,-58,-2147483648,1,805306369,-59,-2147483648,5,536870918,1073741825,12,13,13,-862,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"RoadTileSet","path":"tilesets/RoadTileSet/RoadTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Landscape02","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Landscape02","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":34,"SerialiseWidth":60,"TileCompressedData":[
           -1161,-2147483648,3,145,146,147,-57,-2147483648,3,161,162,163,-56,-2147483648,5,145,116,162,117,147,
-          -55,-2147483648,1,161,-3,162,1,163,-55,-2147483648,5,177,132,162,162,163,-56,-2147483648,4,161,162,162,
-          163,-56,-2147483648,4,161,162,162,163,-56,-2147483648,4,161,162,162,163,-56,-2147483648,4,177,178,178,
-          179,-58,-2147483648,1,0,-57,-2147483648,3,145,146,147,-57,-2147483648,6,161,162,163,-2147483648,116,
-          117,-54,-2147483648,6,177,178,179,-2147483648,132,133,-153,-2147483648,
+          -55,-2147483648,5,161,162,148,162,163,-55,-2147483648,5,177,132,162,148,163,-56,-2147483648,4,161,162,
+          162,163,-56,-2147483648,4,161,149,149,163,-56,-2147483648,4,161,149,149,163,-56,-2147483648,4,177,178,
+          178,179,-58,-2147483648,1,0,-57,-2147483648,3,145,146,147,-57,-2147483648,6,161,162,163,-2147483648,
+          116,117,-54,-2147483648,6,177,178,179,-2147483648,132,133,-153,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"LandscapeTileSet","path":"tilesets/LandscapeTileSet/LandscapeTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Landscape","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Landscape","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":34,"SerialiseWidth":60,"TileCompressedData":[
           -510,-2147483648,-8,18,-48,-2147483648,-2,18,-2,-2147483648,-11,18,-44,-2147483648,-3,18,-2,114,-10,

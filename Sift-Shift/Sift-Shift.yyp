@@ -57,7 +57,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.1400.4.1030",
   },
   "name":"Sift-Shift",
   "resources":[
@@ -173,6 +173,8 @@
     {"id":{"name":"Spr_Quit","path":"sprites/Spr_Quit/Spr_Quit.yy",},},
     {"id":{"name":"Spr_Resume","path":"sprites/Spr_Resume/Spr_Resume.yy",},},
     {"id":{"name":"Spr_RoadTile","path":"sprites/Spr_RoadTile/Spr_RoadTile.yy",},},
+    {"id":{"name":"Spr_Rubble_1","path":"sprites/Spr_Rubble_1/Spr_Rubble_1.yy",},},
+    {"id":{"name":"Spr_Rubble","path":"sprites/Spr_Rubble/Spr_Rubble.yy",},},
     {"id":{"name":"Spr_Sawmill","path":"sprites/Spr_Sawmill/Spr_Sawmill.yy",},},
     {"id":{"name":"Spr_Settings","path":"sprites/Spr_Settings/Spr_Settings.yy",},},
     {"id":{"name":"Spr_SilverIngot_1","path":"sprites/Spr_SilverIngot_1/Spr_SilverIngot_1.yy",},},
@@ -180,6 +182,7 @@
     {"id":{"name":"Spr_SilverOre_1","path":"sprites/Spr_SilverOre_1/Spr_SilverOre_1.yy",},},
     {"id":{"name":"Spr_SilverOre","path":"sprites/Spr_SilverOre/Spr_SilverOre.yy",},},
     {"id":{"name":"Spr_Smelter","path":"sprites/Spr_Smelter/Spr_Smelter.yy",},},
+    {"id":{"name":"Spr_StoneMason","path":"sprites/Spr_StoneMason/Spr_StoneMason.yy",},},
     {"id":{"name":"Spr_Timber_1","path":"sprites/Spr_Timber_1/Spr_Timber_1.yy",},},
     {"id":{"name":"Spr_Timber","path":"sprites/Spr_Timber/Spr_Timber.yy",},},
     {"id":{"name":"Spr_TinIngot_1","path":"sprites/Spr_TinIngot_1/Spr_TinIngot_1.yy",},},
