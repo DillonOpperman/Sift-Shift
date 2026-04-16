@@ -16,13 +16,21 @@ var biome_cell    = 18;  // Controls the scale of biome regions
 //Determines size and frequency of detailed tiles
 var detail_tiles = [
     { name: "GrassRock",   on_tile: 18, cell: 4, thresh: 0.92, tile: 48  },
-    { name: "DesertPlant", on_tile: 36, cell: 5, thresh: 0.90, tile: 64 },
-	{ name: "GrassTrees", on_tile: 18, cell: 2, thresh: 0.80, tile: 32 }
+    { name: "DesertPlant", on_tile: 36, cell: 5, thresh: 0.90, tile: 64 }
 ];
 
 var resource_tiles = [
+<<<<<<<< Updated upstream:Sift-Shift-Map-Gen/objects/Obj_Map_Generation_Controller/Create_0.gml
     { name: "Iron",   cell: 8, thresh: 0.96, tile: 1 },
     { name: "Copper", cell: 3, thresh: 0.94, tile: 2 },
+========
+    { name: "Copper", on_tile: -1, cell: 4, thresh: 0.94, tile: 1 },
+    { name: "Iron",   on_tile: -1, cell: 8, thresh: 0.98, tile: 2 },
+    { name: "Tin",    on_tile: -1, cell: 2, thresh: 0.96, tile: 3 },
+    { name: "Silver", on_tile: -1, cell: 2, thresh: 0.98, tile: 5 },
+    { name: "STree",   on_tile: 18, cell: 3, thresh: 0.92, tile: 11 },
+	{ name: "LTree", on_tile: 18, cell: 6, thresh: 0.90, tile: 12}
+>>>>>>>> Stashed changes:Sift-Shift-3-24-Josh/objects/Obj_Map_Controller/Create_0.gml
 ];
 
 randomise();
@@ -136,10 +144,18 @@ for (var tx = 0; tx < map_width; tx++) {
 //resource loop
 for (var tx = 0; tx < map_width; tx++) {
     for (var ty = 0; ty < map_height; ty++) {
+    
+        // Read what base tile was placed here so we can check on_tile
+        var base_tile = tilemap_get(tm_base, tx, ty);
+        
         var final_tile = 0;
         for (var i = 0; i < array_length(resource_tiles); i++) {
             var t    = resource_tiles[i];
             var grid = res_seed_grids[i];
+            
+            // -1 means any tile
+            if (t.on_tile != -1 && t.on_tile != base_tile) continue;
+            
             var sample_x = tx / t.cell;
             var sample_y = ty / t.cell;
             var cx = floor(sample_x);
