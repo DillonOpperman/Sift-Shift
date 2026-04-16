@@ -1,0 +1,1 @@
+draw_sprite_ext(current_ingot, -1, x+8, y+10, 1, 1, 0, c_white, icon_alpha)

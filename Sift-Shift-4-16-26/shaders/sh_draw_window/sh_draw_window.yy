@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"sh_draw_window",
+  "name":"sh_draw_window",
+  "parent":{
+    "name":"Discard?",
+    "path":"folders/Discard?.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}
