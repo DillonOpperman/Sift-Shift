@@ -5,7 +5,8 @@ var my = mouse_y div tile_size;
 hover_x = mx * tile_size;
 hover_y = my * tile_size;
 
-
+tile_price = (1000/(1+exp(-0.01 * (tiles_bought-550))));
+//global.gold = tile_price
 //when mouse is clicked on question tiles it removes them
 if(mouse_check_button_pressed(mb_left)) {
 	// gets the id of buyable layer
@@ -22,10 +23,10 @@ if(mouse_check_button_pressed(mb_left)) {
 	
 	//removes 2x2 tile if not empty, -1 is to keep within total 2x2 box
 	if(clicked_tile != 0 && !Obj_Sell.hovering) {
-			
-			
-			if(global.gold > 0) {
-				//global.gold--;
+			if(global.gold >= tile_price) {
+				global.gold -= tile_price;
+				global.gold = ceil(global.gold);
+				tiles_bought++;
 				tilemap_set_at_pixel(map_id, 0, big_x, big_y);
 				tilemap_set_at_pixel(map_id, 0, big_x + tile_size - 1, big_y);
 				tilemap_set_at_pixel(map_id, 0, big_x, big_y + tile_size - 1);

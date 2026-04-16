@@ -35,7 +35,7 @@
           16,-6,-2147483648,1,18,-4,17,-84,-2147483648,-4,17,1,16,-6,-2147483648,1,18,-4,17,-84,-2147483648,-4,
           17,2,16,0,-5,-2147483648,1,18,-4,17,-84,-2147483648,-4,17,1,24,-6,25,1,26,-4,17,-84,-2147483648,-16,
           17,-84,-2147483648,-16,17,-84,-2147483648,-16,17,-84,-2147483648,-16,17,-8484,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"FogTileSet","path":"tilesets/FogTileSet/FogTileSet.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"FogTileSet","path":"tilesets/FogTileSet/FogTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_Resource","depth":-1199,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Resource","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":100,"SerialiseWidth":100,"TileCompressedData":[
           -101,-2147483648,3,11,-2147483648,12,-197,-2147483648,1,12,-101,-2147483648,1,11,-97,-2147483648,1,11,
           -305,-2147483648,2,3,2,-3,-2147483648,-2,0,-95,-2147483648,6,1,0,2,-2147483648,3,11,-196,-2147483648,

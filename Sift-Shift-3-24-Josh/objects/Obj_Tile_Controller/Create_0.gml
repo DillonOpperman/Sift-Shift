@@ -16,3 +16,6 @@ global.lumber = 0;
 global.copperTools = 0;
 global.ironTools = 0;
 global.bronzeTools = 0;
+
+tiles_bought = 1;
+tile_price = 1;
