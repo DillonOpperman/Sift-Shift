@@ -22,8 +22,10 @@ camera_set_view_pos(view_get_camera(0),view_x,view_y)
 
 //check if the mouse wheel is moving up or down and change the coordinate for the camera
 if(mouse_wheel_up()){
-	cam_height -= 18
-	cam_width -= 32
+	if(cam_height >=180 || cam_width >= 320){
+		cam_height -= 18
+		cam_width -= 32
+	}
 }
 if(mouse_wheel_down()){
 	cam_height += 18

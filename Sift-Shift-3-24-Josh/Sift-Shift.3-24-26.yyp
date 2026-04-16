@@ -200,6 +200,7 @@
     {"id":{"name":"Spr_CopperTools","path":"sprites/Spr_CopperTools/Spr_CopperTools.yy",},},
     {"id":{"name":"Spr_Destroy","path":"sprites/Spr_Destroy/Spr_Destroy.yy",},},
     {"id":{"name":"Spr_GoldCoin","path":"sprites/Spr_GoldCoin/Spr_GoldCoin.yy",},},
+    {"id":{"name":"Spr_Inactive","path":"sprites/Spr_Inactive/Spr_Inactive.yy",},},
     {"id":{"name":"Spr_IronIngot_clear","path":"sprites/Spr_IronIngot_clear/Spr_IronIngot_clear.yy",},},
     {"id":{"name":"Spr_IronIngot","path":"sprites/Spr_IronIngot/Spr_IronIngot.yy",},},
     {"id":{"name":"Spr_IronOre_clear","path":"sprites/Spr_IronOre_clear/Spr_IronOre_clear.yy",},},

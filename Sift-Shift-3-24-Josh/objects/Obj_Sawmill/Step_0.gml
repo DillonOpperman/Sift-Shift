@@ -10,7 +10,7 @@ if(spawn_timer >= spawn_interval) {
 		
 		if (instance_place(sx, sy, lumber_object) == noone) {
 			if(current_fuel > 0){
-			current_fuel--
+			global.timber--
 			var it = instance_create_layer(sx, sy, "In_Resources", lumber_object);
 			it.vx = 0;
 			it.vy = 0;

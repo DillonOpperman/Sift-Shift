@@ -62,8 +62,8 @@ if(mouse_check_button_pressed(mb_left)) {
 				}
 				break;
 				case 7:
-				if(global.gold >= 128){
-					global.gold -= 128;
+				if(global.gold >= 32){
+					global.gold -= 32;
 					instance_create_layer(big_x,big_y,layer_get_id("In_Factory"),Obj_Warehouse); 
 				}
 				break;

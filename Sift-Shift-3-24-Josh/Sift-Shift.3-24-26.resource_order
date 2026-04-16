@@ -84,6 +84,7 @@
     {"name":"Spr_CopperTools","order":26,"path":"sprites/Spr_CopperTools/Spr_CopperTools.yy",},
     {"name":"Spr_Destroy","order":13,"path":"sprites/Spr_Destroy/Spr_Destroy.yy",},
     {"name":"Spr_GoldCoin","order":20,"path":"sprites/Spr_GoldCoin/Spr_GoldCoin.yy",},
+    {"name":"Spr_Inactive","order":32,"path":"sprites/Spr_Inactive/Spr_Inactive.yy",},
     {"name":"Spr_IronIngot_clear","order":14,"path":"sprites/Spr_IronIngot_clear/Spr_IronIngot_clear.yy",},
     {"name":"Spr_IronIngot","order":10,"path":"sprites/Spr_IronIngot/Spr_IronIngot.yy",},
     {"name":"Spr_IronOre_clear","order":15,"path":"sprites/Spr_IronOre_clear/Spr_IronOre_clear.yy",},

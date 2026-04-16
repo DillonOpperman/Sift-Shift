@@ -25,6 +25,8 @@ var resource_tiles = [
     { name: "Iron", cell: 4, thresh: 0.92, tile: 2 },
 	{ name: "Tin", cell: 2, thresh: 0.96, tile: 3 },
 	{ name: "Silver", cell: 2, thresh: 0.98, tile: 5 },
+	{ name: "SmallTrees", cell: 2, thresh: 0.90, tile: 11 },
+	{ name: "BigTrees", cell: 2, thresh: 0.90, tile: 12 },
 ];
 
 randomise();
