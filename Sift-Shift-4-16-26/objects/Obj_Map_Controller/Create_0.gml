@@ -180,11 +180,11 @@ var ssx = floor(map_width  / 2);
 var ssy = floor(map_height / 2);
 for (var tx = ssx - start_size; tx < ssx + start_size; tx++) {
     for (var ty = ssy - start_size; ty < ssy + start_size; ty++) {
-        tilemap_set(tm_base,     114, tx, ty);
+        tilemap_set(tm_base,     18, tx, ty);
         tilemap_set(tm_resource, 0,   tx, ty);
 		tilemap_set(tm_buyable, 0, tx, ty);
     }
 }
 var sCopperX = ssx + irandom_range(-start_size + 1, start_size - 1);
 var sCopperY = ssy + irandom_range(-start_size + 1, start_size - 1);
-tilemap_set(tm_resource, 2, sCopperX, sCopperY);
+tilemap_set(tm_resource, 1, sCopperX, sCopperY);
