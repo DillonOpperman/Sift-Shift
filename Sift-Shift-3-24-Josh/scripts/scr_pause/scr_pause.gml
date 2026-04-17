@@ -1,4 +1,6 @@
-function pause_everything() {
+function src_pause(){
+	
+	function pause_everything() {
 	with(obj_particle_manager) {
 		if(instance_exists(obj_enemy)) {
 			part_system_automatic_update(obj_enemy.particle, false);
@@ -25,4 +27,6 @@ function resume_everything() {
 		part_system_automatic_draw(particle_system, true);
 		part_system_automatic_update(particle_system, true);
 	}
+}
+
 }

@@ -1,27 +1,57 @@
-is_paused = false;
-pause_surface = -1;
-
-// Menu States: "main", "settings", "controls"
-menu_state = "main"; 
-
-// Icon Mapping
-menu_icons_main = [Spr_Resume, SettingsIcon, PlayerIcon, InventoryIcon, TimerIcon, Spr_Quit]; 
-
-menu_index = 0;
-menu_options_main = ["Resume", "Settings", "Controls", "Quit", "Save Game", "Load Game"];
-menu_options_settings = ["Fullscreen: Off", "Music: On", "SFX: 100%", "Back"];
-menu_options_controls = ["LMB: Place Object", "RMB: Remove Object", "WASD: Pan Camera", "Back"];
-
-// This variable will point to whichever array we are currently using
-current_menu = menu_options_main;
-
-global.money = 100;
-global.music_on = true;
-
-// Load the saved preference on startup
+menu_index          = 0;
+game_active         = false;
+pause_surface       = -1;
+notify_timer        = 0;
+notify_text         = "";
+_pending_load_slot  = -1;
+ 
+// Settings
+// Settings - LOAD THESE FIRST
+if (!variable_global_exists("music_on")) global.music_on = true;
 ini_open("settings.ini");
-global.music_on = ini_read_real("Audio", "Music", true);
+global.music_on = ini_read_real("Audio", "Music", 1) > 0;
+var _fs = ini_read_real("Display", "Fullscreen", 1) > 0;
 ini_close();
+window_set_fullscreen(_fs);
 
-// Sync the menu text to the loaded setting
-menu_options_settings[1] = global.music_on ? "Music: On" : "Music: Off";
+// TRIGGER MUSIC HERE (After settings are loaded but before states change)
+if (global.music_on) {
+    if (!audio_is_playing(snd_main_theme)) {
+        audio_play_sound(snd_main_theme, 10, true);
+    }
+}
+ 
+// Resource safety net
+if (!variable_global_exists("money"))  global.money  = 100;
+if (!variable_global_exists("copper")) global.copper = 0;
+if (!variable_global_exists("iron"))   global.iron   = 0;
+if (!variable_global_exists("tin"))    global.tin    = 0;
+if (!variable_global_exists("bronze")) global.bronze = 0;
+if (!variable_global_exists("silver")) global.silver = 0;
+if (!variable_global_exists("gold"))   global.gold   = 0;
+ 
+// Decide state based on _menu_action
+if (!variable_global_exists("_menu_action")) global._menu_action = "title";
+ 
+var _action = global._menu_action;
+global._menu_action = "title";   // reset for next time
+ 
+switch (_action) {
+    case "new_game":
+        menu_state  = "none";
+        game_active = true;
+        show_debug_message("obj_pause: NEW GAME");
+        break;
+ 
+    case "exit_menu":
+    case "title":
+    default:
+        menu_state  = "title";
+        game_active = false;
+        alarm[0] = 1;   // freeze the world in 1 frame
+        show_debug_message("obj_pause: TITLE SCREEN");
+        break;
+		
+	}
+
+ 

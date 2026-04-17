@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_pause",
+  "%Name":"scr_save_system",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_pause",
+  "name":"scr_save_system",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
