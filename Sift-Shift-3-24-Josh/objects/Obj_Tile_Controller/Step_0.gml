@@ -21,6 +21,14 @@ if(mouse_check_button_pressed(mb_left)) {
 	//gets tile at mouse position
 	var clicked_tile = tilemap_get_at_pixel(map_id, big_x, big_y);
 	
+	//gets surrounding tiles
+	var up_tile = tilemap_get_at_pixel(map_id, big_x, big_y + tile_size);
+	var down_tile = tilemap_get_at_pixel(map_id, big_x, big_y - tile_size);
+	var left_tile = tilemap_get_at_pixel(map_id, big_x - tile_size, big_y);
+	var right_tile = tilemap_get_at_pixel(map_id, big_x + tile_size, big_y);
+	
+		//checks surrounding tiles to only allow expansion of surrounding tiles
+	if(up_tile == 0 || down_tile == 0 || left_tile == 0 || right_tile == 0){
 	//removes 2x2 tile if not empty, -1 is to keep within total 2x2 box
 	if(clicked_tile != 0 && !Obj_Sell.hovering) {
 			if(global.gold >= tile_price) {
@@ -33,7 +41,7 @@ if(mouse_check_button_pressed(mb_left)) {
 				tilemap_set_at_pixel(map_id, 0, big_x + tile_size - 1, big_y + tile_size - 1);
 			}
 	}
-	
+	}
 	
 	
 
