@@ -40,7 +40,7 @@ function save_delete(_slot) {
 // ─────────────────────────────────────────────────────────────
 function _get_building_types() {
     return [Obj_Belt, Obj_Mine, Obj_Smelter, Obj_Blacksmith,
-            Obj_Sawmill, Obj_Windmill, Obj_Warehouse];
+            Obj_Sawmill, Obj_Timbermill, Obj_Warehouse];
 }
  
  
@@ -167,7 +167,7 @@ function load_game(_slot) {
     for (var t = 0; t < array_length(_building_types); t++) {
         with (_building_types[t]) { instance_destroy(); }
     }
-    with (Obj_Ore_Controller) { instance_destroy(); }
+    with (Obj_Resource_Controller) { instance_destroy(); }
  
     show_debug_message("  existing buildings destroyed");
  

@@ -85,6 +85,7 @@
     {"id":{"name":"Obj_BronzeIngot","path":"objects/Obj_BronzeIngot/Obj_BronzeIngot.yy",},},
     {"id":{"name":"Obj_BronzeTools","path":"objects/Obj_BronzeTools/Obj_BronzeTools.yy",},},
     {"id":{"name":"Obj_Build_Controller","path":"objects/Obj_Build_Controller/Obj_Build_Controller.yy",},},
+    {"id":{"name":"Obj_Build_Parent","path":"objects/Obj_Build_Parent/Obj_Build_Parent.yy",},},
     {"id":{"name":"obj_button_enemy_down","path":"objects/obj_button_enemy_down/obj_button_enemy_down.yy",},},
     {"id":{"name":"obj_button_enemy_up","path":"objects/obj_button_enemy_up/obj_button_enemy_up.yy",},},
     {"id":{"name":"obj_button_menu","path":"objects/obj_button_menu/obj_button_menu.yy",},},

@@ -1,5 +1,4 @@
 // Block click processing in game objects for 5 frames
-// (a mouse click can easily be held for 3+ frames)
 global._input_guard = 5;
  
 instance_activate_all();

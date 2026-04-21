@@ -1,3 +1,4 @@
+
 if (menu_state == "none") {
     if (notify_timer > 0) {
         _draw_notify();
@@ -9,12 +10,9 @@ if (menu_state == "none") {
 var _gui_w = display_get_gui_width();
 var _gui_h = display_get_gui_height();
  
-// ═════════════════════════════════════════════════════════════
 // 1. BACKGROUND
-// ═════════════════════════════════════════════════════════════
  
 if (menu_state == "title" || menu_state == "title_load" || menu_state == "title_settings" || menu_state == "title_delete") {
-    // Title screens: solid dark background (game isn't "running" visually)
     draw_set_color(make_color_rgb(18, 18, 22));
     draw_set_alpha(1);
     draw_rectangle(0, 0, _gui_w, _gui_h, false);
@@ -28,10 +26,8 @@ if (menu_state == "title" || menu_state == "title_load" || menu_state == "title_
     draw_set_alpha(0.6);
     draw_rectangle(0, 0, _gui_w, _gui_h, false);
 }
- 
-// ═════════════════════════════════════════════════════════════
+
 // 2. PANEL BOX
-// ═════════════════════════════════════════════════════════════
  
 var _box_w = 380;
 var _box_h = 460;
@@ -49,12 +45,10 @@ draw_rectangle(_x1, _y1, _x2, _y2, false);
 draw_set_alpha(1);
 draw_set_color(make_color_rgb(180, 170, 150));
 draw_rectangle(_x1, _y1, _x2, _y2, true);
-draw_rectangle(_x1 + 1, _y1 + 1, _x2 - 1, _y2 - 1, true);  // double border
- 
-// ═════════════════════════════════════════════════════════════
+draw_rectangle(_x1 + 1, _y1 + 1, _x2 - 1, _y2 - 1, true);
+
 // 3. HEADER
-// ═════════════════════════════════════════════════════════════
- 
+
 draw_set_font(Fnt_UI);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
@@ -85,12 +79,8 @@ draw_text_transformed(_gui_w / 2, _y1 + 40, _header, 1.5, 1.5, 0);
 draw_set_color(make_color_rgb(180, 170, 150));
 draw_line_width(_x1 + 30, _y1 + 68, _x2 - 30, _y1 + 68, 1);
  
- 
-// ═════════════════════════════════════════════════════════════
 // 4. MENU BUTTONS — drawn per state
-// ═════════════════════════════════════════════════════════════
- 
-// Reset btn_rects for mouse detection in Step
+
 btn_rects = [];
  
 var _btn_w = 280;
@@ -203,7 +193,6 @@ else if (menu_state == "pause_load") {
  
 // ─── PAUSE → CONTROLS ───────────────────────────────────────
 else if (menu_state == "pause_controls") {
-    // Info lines (not buttons — just text)
     var _controls = [
         "LMB — Place Building",
         "RMB — Remove Building",
@@ -227,10 +216,8 @@ else if (menu_state == "pause_controls") {
     _draw_menu_btn(_cx, _back_y, 160, _btn_h, "BACK", true);
 }
  
- 
-// ═════════════════════════════════════════════════════════════
 // 5. FOOTER — balance display (only on title & pause)
-// ═════════════════════════════════════════════════════════════
+
 if (menu_state == "title" || menu_state == "pause") {
     draw_set_font(Fnt_UI);
     draw_set_halign(fa_right);
@@ -241,9 +228,8 @@ if (menu_state == "title" || menu_state == "pause") {
     }
 }
  
-// ═════════════════════════════════════════════════════════════
 // 6. SAVE NOTIFICATION (overlaid on everything)
-// ═════════════════════════════════════════════════════════════
+
 if (notify_timer > 0) _draw_notify();
  
 // ── Reset draw state ─────────────────────────────────────────
@@ -252,10 +238,7 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
  
- 
-// ═════════════════════════════════════════════════════════════
 // HELPER FUNCTIONS (instance-scoped)
-// ═════════════════════════════════════════════════════════════
  
 /// Draws a single menu button and registers its rect for mouse detection.
 /// _cx, _cy = center position; _w, _h = dimensions
@@ -327,4 +310,3 @@ function _draw_notify() {
  
     draw_set_alpha(1);
 }
- 

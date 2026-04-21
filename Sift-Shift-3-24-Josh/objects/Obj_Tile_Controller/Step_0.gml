@@ -30,7 +30,7 @@ if(mouse_check_button_pressed(mb_left)) {
 		//checks surrounding tiles to only allow expansion of surrounding tiles
 	if(up_tile == 0 || down_tile == 0 || left_tile == 0 || right_tile == 0){
 	//removes 2x2 tile if not empty, -1 is to keep within total 2x2 box
-	if(clicked_tile != 0 && !Obj_Sell.hovering) {
+	if(clicked_tile != 0) {
 			if(global.gold >= tile_price) {
 				global.gold -= tile_price;
 				global.gold = ceil(global.gold);

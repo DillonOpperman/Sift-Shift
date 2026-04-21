@@ -10,6 +10,11 @@ current_tool = Spr_CopperTools
 current_fuel = global.copperIngot
 tool_object = Obj_CopperTools;
 
+building_name = "Blacksmith"
+produces = "stuff"
+consumes = "more stuff"
+description = "it makes stuff"
+
 spawn_interval = game_get_speed(gamespeed_fps) * 3;
 spawn_timer = 0;
 

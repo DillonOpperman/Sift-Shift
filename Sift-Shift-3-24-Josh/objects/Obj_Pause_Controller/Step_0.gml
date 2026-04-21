@@ -1,3 +1,4 @@
+// ── Input guard countdown ───────────
 if (variable_global_exists("_input_guard") && global._input_guard > 0) {
     global._input_guard--;
 }
@@ -25,10 +26,7 @@ if (menu_state == "none") {
     exit;
 }
  
- 
-// ═════════════════════════════════════════════════════════════
 // MENU INPUT (shared by all states)
-// ═════════════════════════════════════════════════════════════
  
 var _btn_count = 0;
 switch (menu_state) {
@@ -79,11 +77,9 @@ if (!_selected && mouse_check_button_pressed(mb_left)) {
  
 var _back = keyboard_check_pressed(vk_escape);
  
- 
-// ═════════════════════════════════════════════════════════════
+
 // STATE-SPECIFIC ACTIONS
-// ═════════════════════════════════════════════════════════════
- 
+
 // ─── TITLE SCREEN ────────────────────────────────────────────
 if (menu_state == "title") {
     if (_selected) {
@@ -206,7 +202,6 @@ else if (menu_state == "pause") {
                 menu_state = "pause_controls"; menu_index = 0;
                 break;
             case 4:  // Exit to Menu
-                // Return to title — restart room for clean state
                 global._menu_action = "exit_menu";
                 room_goto(Room1);
                 break;
@@ -241,13 +236,17 @@ else if (menu_state == "pause_settings") {
                 ini_write_real("Display", "Fullscreen", window_get_fullscreen());
                 ini_close();
                 break;
-            case 1:
-                global.music_on = !global.music_on;
-                if (!global.music_on) audio_pause_all(); else audio_resume_all();
-                ini_open("settings.ini");
-                ini_write_real("Audio", "Music", global.music_on);
-                ini_close();
-                break;
+			case 1: // Music Toggle in Title Settings
+			    global.music_on = !global.music_on;
+			    if (global.music_on) {
+			        if (!audio_is_playing(snd_main_theme)) audio_play_sound(snd_main_theme, 10, true);
+			    } else {
+			        audio_stop_sound(snd_main_theme);
+			    }
+			    ini_open("settings.ini");
+			    ini_write_real("Audio", "Music", global.music_on);
+			    ini_close();
+			    break;
             case 2:
                 menu_state = "pause"; menu_index = 2;
                 break;

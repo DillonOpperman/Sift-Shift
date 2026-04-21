@@ -33,6 +33,7 @@
     {"name":"Obj_Bronze","order":3,"path":"objects/Obj_Bronze/Obj_Bronze.yy",},
     {"name":"Obj_BronzeIngot","order":3,"path":"objects/Obj_BronzeIngot/Obj_BronzeIngot.yy",},
     {"name":"Obj_BronzeTools","order":2,"path":"objects/Obj_BronzeTools/Obj_BronzeTools.yy",},
+    {"name":"Obj_Build_Parent","order":6,"path":"objects/Obj_Build_Parent/Obj_Build_Parent.yy",},
     {"name":"obj_button_parent","order":28,"path":"objects/obj_button_parent/obj_button_parent.yy",},
     {"name":"Obj_Iron","order":1,"path":"objects/Obj_Iron/Obj_Iron.yy",},
     {"name":"Obj_IronIngot","order":1,"path":"objects/Obj_IronIngot/Obj_IronIngot.yy",},

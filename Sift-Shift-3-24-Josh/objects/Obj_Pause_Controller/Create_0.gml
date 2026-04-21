@@ -6,20 +6,12 @@ notify_text         = "";
 _pending_load_slot  = -1;
  
 // Settings
-// Settings - LOAD THESE FIRST
 if (!variable_global_exists("music_on")) global.music_on = true;
 ini_open("settings.ini");
 global.music_on = ini_read_real("Audio", "Music", 1) > 0;
 var _fs = ini_read_real("Display", "Fullscreen", 1) > 0;
 ini_close();
 window_set_fullscreen(_fs);
-
-// TRIGGER MUSIC HERE (After settings are loaded but before states change)
-if (global.music_on) {
-    if (!audio_is_playing(snd_main_theme)) {
-        audio_play_sound(snd_main_theme, 10, true);
-    }
-}
  
 // Resource safety net
 if (!variable_global_exists("money"))  global.money  = 100;
@@ -51,7 +43,9 @@ switch (_action) {
         alarm[0] = 1;   // freeze the world in 1 frame
         show_debug_message("obj_pause: TITLE SCREEN");
         break;
-		
-	}
+}
 
- 
+	// Start the music loop if the player hasn't muted it
+	if (global.music_on) {
+	    audio_play_sound(snd_main_theme, 10, true);
+}
