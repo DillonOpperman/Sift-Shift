@@ -41,6 +41,7 @@ if (mouse_check_button_pressed(mb_left)) {
                 case 5: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Sawmill); break;
                 case 6: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Timbermill); break;
                 case 7: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Warehouse); break;
+				//case 8: instance_destroy(); break;
             }
         }
     }

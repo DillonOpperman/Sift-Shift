@@ -137,7 +137,7 @@ if (inv_open) {
  
         // PRICE (middle area, dimmer gold text)
         draw_set_color(make_color_rgb(180, 170, 100));
-        draw_text(_list_x + 160, _cy, string(_item.sell_price) + "g ea.");
+        draw_text(_list_x + 225, _cy, string(_item.sell_price) + "g ea.");
  
         // ── RIGHT SIDE: Input box + SELL button ─────────────
  
