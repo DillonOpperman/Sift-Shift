@@ -3,6 +3,11 @@ tile = 32;
 x = floor(x / tile) * tile;
 y = floor(y / tile) * tile;
 
+building_name = "Mine"
+produces = "Ore"
+consumes = "Sits on an ore tile"
+description = "Facility used to generate ore."
+
 spawn_interval = game_get_speed(gamespeed_fps) * 3;
 spawn_timer = 0;
 

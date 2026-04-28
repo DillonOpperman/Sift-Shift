@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"Obj_Warehouse",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"Obj_Warehouse",
   "overriddenProperties":[],
@@ -9,7 +11,10 @@
     "name":"FactoryItems",
     "path":"folders/Objects/InGame/FactoryItems.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_Build_Parent",
+    "path":"objects/Obj_Build_Parent/Obj_Build_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

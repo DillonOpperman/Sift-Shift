@@ -4,6 +4,8 @@ var my = mouse_y div tile_size;
  
 hover_x = mx * tile_size;
 hover_y = my * tile_size;
+
+hovered_facility = instance_position(mouse_x, mouse_y, all);
  
 // ── INPUT GUARD: skip click processing after load/resume ────
 if (variable_global_exists("_input_guard") && global._input_guard > 0) {
@@ -31,18 +33,55 @@ if (mouse_check_button_pressed(mb_left)) {
  
     // removes 2x2 tile if not empty, -1 is to keep within total 2x2 box
     if (clicked_tile == 0) {
-        if (global.gold > 0) {
+        if (global.gold >= 1) {
             global.gold -= 1;
             switch (facility) {
-                case 1: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Belt); break;
-                case 2: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Mine); break;
-                case 3: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Smelter); break;
-                case 4: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Blacksmith); break;
-                case 5: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Sawmill); break;
-                case 6: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Timbermill); break;
-                case 7: instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Warehouse); break;
-				//case 8: instance_destroy(); break;
-            }
+                case 1: 
+					if (global.gold >= 8) {
+						global.gold -= 8;
+						instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Belt);
+					}
+				break;
+                case 2: 
+					if (global.gold >= 16) {
+						global.gold -= 16;
+						instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Mine); 
+					}
+				break;
+                case 3: 
+					if (global.gold >= 32) {
+						global.gold -= 32;
+						instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Smelter);
+					} 
+				break;
+                case 4: 
+					if (global.gold >= 32) {
+						global.gold -= 32;
+						instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Blacksmith); 
+					}
+				break;
+                case 5: 
+					if (global.gold >= 32) {
+						global.gold -= 32;
+						instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Sawmill); 
+					}
+				break;
+                case 6: 
+					if (global.gold >= 16) {
+						global.gold -= 16;
+						instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Timbermill); 
+					}
+				break;
+                case 7: 
+					if (global.gold >= 32) {
+						global.gold -= 32;
+						instance_create_layer(big_x, big_y, layer_get_id("In_Factory"), Obj_Warehouse); 
+					}
+				break;
+				case 8: 
+					instance_destroy(hovered_facility); 
+				break;
+			}
         }
     }
 }

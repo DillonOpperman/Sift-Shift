@@ -13,7 +13,10 @@
     "name":"FactoryItems",
     "path":"folders/Objects/InGame/FactoryItems.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_Build_Parent",
+    "path":"objects/Obj_Build_Parent/Obj_Build_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

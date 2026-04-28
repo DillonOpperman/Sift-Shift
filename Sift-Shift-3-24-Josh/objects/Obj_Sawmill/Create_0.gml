@@ -10,6 +10,11 @@ current_lumber = Spr_Lumber
 current_fuel = global.timber
 lumber_object = Obj_Lumber;
 
+building_name = "Lumbermill"
+produces = "Lumber"
+consumes = "Timber"
+description = "Facility used to make lumber, needed for tools."
+
 spawn_interval = game_get_speed(gamespeed_fps) * 3;
 spawn_timer = 0;
 

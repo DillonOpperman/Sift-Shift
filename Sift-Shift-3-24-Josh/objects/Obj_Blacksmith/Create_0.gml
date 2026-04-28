@@ -11,9 +11,9 @@ current_fuel = global.copperIngot
 tool_object = Obj_CopperTools;
 
 building_name = "Blacksmith"
-produces = "stuff"
-consumes = "more stuff"
-description = "it makes stuff"
+produces = "Tools"
+consumes = "Ingots + Lumber"
+description = "Facility used to make the most expensive goods"
 
 spawn_interval = game_get_speed(gamespeed_fps) * 3;
 spawn_timer = 0;

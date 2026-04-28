@@ -10,6 +10,11 @@ current_ingot = Spr_CopperIngot
 current_fuel = global.copper
 ingot_object = Obj_CopperIngot;
 
+building_name = "Smelter"
+produces = "Ingots"
+consumes = "Ore"
+description = "Facility used to make Ingots, needed for tools."
+
 spawn_interval = game_get_speed(gamespeed_fps) * 3;
 spawn_timer = 0;
 

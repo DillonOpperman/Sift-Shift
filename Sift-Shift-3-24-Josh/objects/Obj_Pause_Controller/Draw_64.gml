@@ -157,6 +157,7 @@ else if (menu_state == "pause") {
     for (var i = 0; i < array_length(_labels); i++) {
         _draw_menu_btn(_cx, _start_y + i * (_btn_h + _gap), _btn_w, _btn_h, _labels[i], i == menu_index);
     }
+	draw_text_ext(_cx, _start_y + 300, "All unsaved progress will be lost.", 3, 500);
 }
  
 // ─── PAUSE → SAVE SLOTS ─────────────────────────────────────
