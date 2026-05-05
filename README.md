@@ -58,7 +58,7 @@ Sift/Shift is a factory management game developed in Game Maker Studio inspired 
 
 ## Tutorials/Articles We Found Helpful
 
-# Tutorial Videos
+### Tutorial Videos
 - [Beginner GameDev Mistakes - Ep 1](https://www.youtube.com/watch?v=Z12nPVTtKnw) by Sara Spalding
 - [GameMaker: Action RPG Tutorial (Part 1: Moving & Resolution)](https://www.youtube.com/watch?v=upoXH9hAKUg&list=PLPRT_JORnIuosvhfax2TQTEmN7OYTcSvK) by Sara Spalding
 - [GameMaker: Farming RPG (Part 2: Inventory and Player Animations)](https://www.youtube.com/watch?v=e7qJr0cl6hU&t=569s) by Mager Dev
@@ -68,7 +68,7 @@ Sift/Shift is a factory management game developed in Game Maker Studio inspired 
 - [Make Your First RPG | Movement & Enemies](https://www.youtube.com/watch?v=1J5EydrnIPs&t=638s) by Game Maker
 - [The Easiest Way to Make 8Bit Music in FL Studio](http://youtu.be/PciO75NAhtA?si=CoKqmjYBIBLBz_px​) by Emil Ludvigsen
 
-# Articles
+### Articles
 - [Setting up and Using Source Control](https://gamemaker.io/en/help/articles/setting-up-and-using-source-control)
 - [Make Your Own Role-Playing Game](https://gamemaker.io/en/tutorials/how-to-make-an-rpg)
 
