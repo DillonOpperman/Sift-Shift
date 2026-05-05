@@ -16,10 +16,10 @@ Sift/Shift is a factory management game developed in Game Maker Studio inspired 
 ## System Requirements
 
 ### Hardware
-- Windows or MacOS computer
+- Windows, MacOS or Linux computer
+   - (tested with all 3 OS's during development) 
 - Dual-core CPU (minimum)
 - 8GB RAM (minimum)
-- Stable internet connection
 
 ## Getting Started
 
@@ -45,8 +45,7 @@ Sift/Shift is a factory management game developed in Game Maker Studio inspired 
 ### Progression
 - Earn in-game currency by selling products
 - Modify and refine items to increase their value
-- Unlock new tiles, resources, and production capabilities
-- Optional: Purchase in-game currency or time skips with real money
+- Unlock new tiles, resources, and production capabilities via in-game currency
 
 ## Development Team
 
