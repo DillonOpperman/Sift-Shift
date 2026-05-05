@@ -56,16 +56,21 @@ Sift/Shift is a factory management game developed in Game Maker Studio inspired 
 - **Ben Potter** - Art Director, Sound Designer
 - **Josh Schmidt** - Backend Development, Game Mechanics
 
-## Tutorials We Found Helpful
+## Tutorials/Articles We Found Helpful
 
-- **[Beginner GameDev Mistakes - Ep 1](https://www.youtube.com/watch?v=Z12nPVTtKnw) by Sara Spalding
-- **[GameMaker: Action RPG Tutorial (Part 1: Moving & Resolution)](https://www.youtube.com/watch?v=upoXH9hAKUg&list=PLPRT_JORnIuosvhfax2TQTEmN7OYTcSvK) by Sara Spalding
-- **[GameMaker: Farming RPG (Part 2: Inventory and Player Animations)](https://www.youtube.com/watch?v=e7qJr0cl6hU&t=569s) by Mager Dev
-- **[How to make a Camera for any GameMaker game in 4 minutes](https://www.youtube.com/watch?v=2Jlwkletpjk&t=3s) by Sara Spalding
-- **[GameMaker Studio 2: Action RPG Tutorial (Part 5: Initialisation/Pausing)](https://www.youtube.com/watch?v=JwWuZXyTzN0) by Sara Spalding
-- **[Make Your First RPG | Real-Time Combat](https://www.youtube.com/watch?v=xr0mqIy6DAU&t=15s) by Game Maker
-- **[Make Your First RPG | Movement & Enemies](https://www.youtube.com/watch?v=1J5EydrnIPs&t=638s) by Game Maker
-- **[The Easiest Way to Make 8Bit Music in FL Studio](http://youtu.be/PciO75NAhtA?si=CoKqmjYBIBLBz_px​) by Emil Ludvigsen
+# Tutorial Videos
+- [Beginner GameDev Mistakes - Ep 1](https://www.youtube.com/watch?v=Z12nPVTtKnw) by Sara Spalding
+- [GameMaker: Action RPG Tutorial (Part 1: Moving & Resolution)](https://www.youtube.com/watch?v=upoXH9hAKUg&list=PLPRT_JORnIuosvhfax2TQTEmN7OYTcSvK) by Sara Spalding
+- [GameMaker: Farming RPG (Part 2: Inventory and Player Animations)](https://www.youtube.com/watch?v=e7qJr0cl6hU&t=569s) by Mager Dev
+- [How to make a Camera for any GameMaker game in 4 minutes](https://www.youtube.com/watch?v=2Jlwkletpjk&t=3s) by Sara Spalding
+- [GameMaker Studio 2: Action RPG Tutorial (Part 5: Initialisation/Pausing)](https://www.youtube.com/watch?v=JwWuZXyTzN0) by Sara Spalding
+- [Make Your First RPG | Real-Time Combat](https://www.youtube.com/watch?v=xr0mqIy6DAU&t=15s) by Game Maker
+- [Make Your First RPG | Movement & Enemies](https://www.youtube.com/watch?v=1J5EydrnIPs&t=638s) by Game Maker
+- [The Easiest Way to Make 8Bit Music in FL Studio](http://youtu.be/PciO75NAhtA?si=CoKqmjYBIBLBz_px​) by Emil Ludvigsen
+
+# Articles
+- [Setting up and Using Source Control](https://gamemaker.io/en/help/articles/setting-up-and-using-source-control)
+- [Make Your Own Role-Playing Game](https://gamemaker.io/en/tutorials/how-to-make-an-rpg)
 
 ## Contributing
 
