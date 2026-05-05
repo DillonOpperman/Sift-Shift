@@ -28,8 +28,8 @@ Sift/Shift is a factory management game developed in Game Maker Studio inspired 
    git clone https://github.com/DillonOpperman/Sift-Shift.git
 ```
 2. Download and install GameMaker Studio, latest version can be found [here](https://gamemaker.io/en)
-3. Follow setup instructions in the `docs/` folder
-
+3. Extract Sift-Shift.zip and inside the folder run the GameMaker project file
+4. Click the triangle Run button at the top or press F5 to run the game.
 ## Gameplay Overview
 
 ### Resources
