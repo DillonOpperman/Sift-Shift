@@ -4,25 +4,14 @@ A free-to-play factory automation game focused on accessibility and strategic re
 
 ## About
 
-Sift/Shift is a browser-based factory management game inspired by titles like Factorio, Shapez, and Beltmatic. Players oversee a factory that processes materials through production chains, with a focus on efficiency and optimization. Unlike similar games, Sift/Shift offers a beginner-friendly experience with no upfront cost barrier.
+Sift/Shift is a factory management game developed in Game Maker Studio inspired by titles like Factorio, Shapez, and Beltmatic. Players oversee a factory that processes materials through production chains, with a focus on efficiency and optimization. Unlike similar games, Sift/Shift offers a beginner-friendly experience to a genre where it can be very complex to the new player.
 
 ## Key Features
 
-- **Free-to-Play Model**: No upfront cost with optional microtransactions for time acceleration
-- **Beginner-Friendly**: Streamlined tutorial designed for completion in 20-30 minutes
 - **Strategic Depth**: Build efficient production chains and optimize factory layouts
 - **Resource Management**: Extract materials from infinite or mixed finite/infinite resource nodes
 - **In-Game Economy**: Earn currency by selling products and modifying items to increase value
-- **Time-Based Gameplay**: Production processes occur in real-time with optional time-skip purchases
 - **Click-and-Drag Navigation**: Focus on factory management without character movement mechanics
-
-## Technology Stack
-
-- **Development Language**: Java
-- **Game Engine**: GameMaker Studio
-- **Version Control**: GitHub
-- **Database**: MySQL (for user accounts, cloud saves, and progression tracking)
-- **IDE**: Visual Studio Code
 
 ## System Requirements
 
@@ -31,10 +20,6 @@ Sift/Shift is a browser-based factory management game inspired by titles like Fa
 - Dual-core CPU (minimum)
 - 8GB RAM (minimum)
 - Stable internet connection
-
-### Software
-- Modern web browser (Chrome, Edge, Firefox, or Safari)
-- Account creation required for login bonuses, battle pass progression, and cloud saves
 
 ## Getting Started
 
@@ -55,7 +40,7 @@ Sift/Shift is a browser-based factory management game inspired by titles like Fa
 ### Starting Out
 - Begin with a guaranteed resource tile
 - Place your first miner and start selling ore immediately
-- Learn core mechanics through integrated tutorial system
+- Learn core mechanics through
 
 ### Progression
 - Earn in-game currency by selling products
@@ -65,23 +50,12 @@ Sift/Shift is a browser-based factory management game inspired by titles like Fa
 
 ## Development Team
 
-- **Dillon Opperman** - Backend Development, Project Management
+- **Dillon Opperman** - Frontend Development, UI/Menu Team
 - **Jacob Oswald** - Backend Development, Facilitation
 - **Jake Beren** - Backend Development, System Architecture
-- **Kristian Neilands** - Full Stack Development, UI/UX Design
-- **Ben Potter** - Backend Development, System Integration
-- **Josh Schmidt** - Frontend Development, Game Mechanics
-
-## Project Status
-
-**Currently in early development phase** (As of February 2026)
-
-We are actively:
-- Learning GameMaker Studio through official tutorials
-- Setting up development environment and GitHub workflow
-- Finalizing core gameplay mechanics and production chain logic
-- Defining team roles and responsibilities
-- Establishing database schema for user accounts and progression
+- **Kristian Neilands** - Frontend Development, UI/Menu Design
+- **Ben Potter** - Art Director, Sound Designer
+- **Josh Schmidt** - Backend Development, Game Mechanics
 
 ## Contributing
 
