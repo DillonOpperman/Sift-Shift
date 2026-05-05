@@ -60,11 +60,3 @@ Sift/Shift is a factory management game developed in Game Maker Studio inspired 
 ## Contributing
 
 This is a student project developed as part of an academic software engineering course. For questions or suggestions, please contact the development team through the repository issues.
-
-## License
-
-This project is developed for educational purposes.
-
----
-
-**Repository**: https://github.com/DillonOpperman/Sift-Shift
